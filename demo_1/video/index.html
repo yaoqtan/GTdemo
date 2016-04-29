@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=device-dpi">
+  <title>Video</title>
+  <style type="text/css">
+    .wrap{
+      max-width: 768px;
+      width: 100%;
+      margin:0 auto;
+      text-align: center;
+    }
+    video{
+      width: 320px;
+      height: 239px;
+      margin:0 auto;
+    }
+    .lage{
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top:0;
+      left: 0;
+      background: #000;
+      z-index: 3;
+    }
+    .plug.hide{
+      position: fixed;
+      bottom:10px;
+      z-index: 4;
+      background: #fff;
+    }
+  </style>
+  <script type="text/javascript"></script>
+</head>
+<body>
+  <div class = "wrap">
+    <video   id = "video" poster="123.png" muted="false" controls>
+      <source src = "123.mp4"></video>
+    </video>
+    <div class = "plug">
+      <a id = "btn" href = "javascript:void(0)">播放</a>
+      <time></time>
+      <a href = "javascript:void(0)" class = "mute">静音</a>
+      <a href = "javascript:void(0)" class = "screen">放大</a>
+    </div>
+  </div>
+  
+  <script type="text/javascript" src = "http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      var video = $("#video").get(0);
+      var btn = $("#btn");
+      var time = $("time");
+      var mute = $(".mute");
+      var screen = $(".screen");
+      var plug = $(".plug");
+      console.log(video)
+      console.log(video.controls);
+      time.html("已经播放时间："+video.currentTime+"总播放时间："+video.duration)
+/*      setInterval(function(){
+        time.html("已经播放时间："+video.currentTime+"总播放时间："+video.duration)
+      },1000)*/
+      video.muted 
+      //是否播放
+      btn.on("click",function(){
+        if(video.paused){
+          video.play();
+          btn.html("暂停");
+      }else{
+          video.pause();
+          time.html("已经播放时间："+video.currentTime+"总播放时间："+video.duration)
+          btn.html("播放");
+
+      }
+      //video.loadstart()
+    });
+
+      //是否静音
+      console.log(video.muted)
+      mute.on("click",function(){
+        if(video.muted == true){
+          video.muted = false;
+          mute.html("是")
+        }else{
+          video.muted = true;
+          mute.html("否")
+        }
+      })
+      //放大缩小
+      screen.on("click",function(){
+        if(plug.hasClass("hide")){
+          video.className = "";
+          plug.removeClass("hide");
+        }else{
+          /*video.addClass("lage");*/
+          plug.addClass("hide");
+          video.className = "lage";
+        }
+      })
+      //表示是否播放完成
+      if(video.ended == true){
+        alert(1)
+      }
+    });
+  </script>
+</body>
+</html>

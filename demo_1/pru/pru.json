@@ -1,0 +1,59 @@
+{
+  "workingList": {
+    "working": [
+      {
+        "clientName": "David",
+        "interviewType": {
+          "id": "4",
+          "name": "#00a956"
+        },
+        "interviewNatures": {
+          "interviewNature": [{
+            "id": "1",
+            "name": "电话跟进"
+          },
+          {
+            "id": "2",
+            "name": "电话跟进"
+          }]
+        },
+        "startDateTime": "2016-04-12 10:00:00",
+        "endDateTime": "2016-04-12 14:00:00"
+      },
+      {
+        "clientName": "David",
+        "interviewType": {
+          "id": "4",
+          "name": "#0860cb"
+        },
+        "interviewNatures": {
+          "interviewNature": [{
+            "id": "1",
+            "name": "培训"
+          }]
+        },
+        "startDateTime": "2016-04-12 12:00:00",
+        "endDateTime": "2016-04-12 14:00:00"
+      },
+      {
+        "clientName": "Stephen",
+        "interviewType": {
+          "id": "5",
+          "name": "#fd9104"
+        },
+        "interviewNatures": {
+          "interviewNature": [{
+            "id": "2",
+            "name": "产品简报"
+          },
+          {
+            "id": "3",
+            "name": "初次面谈"
+          }]
+        },
+        "startDateTime": "2016-04-15 14:00:00",
+        "endDateTime": "2016-04-15 20:00:00"
+      }
+    ]
+  }
+}

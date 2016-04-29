@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sample Page!</title>
+<script language="JavaScript" type="text/javascript">
+/*function testmatch()  //模式匹配并输出结果
+{
+  var msg="\nmatch()方法和exec()方法比较 :\n\n";  
+  //目标字符串
+  var myStr="如果在正则表达式中设置了全局标志(g)进行模式匹配,\n"
+           +"使用match()方法返回的数组中包含所有完整的匹配结果,\n"
+           +"而exec()方法返回的数组中包含各个子匹配的结果.";
+  var regex = /匹配/g;           //创建正则表达式对象 
+  var array=regex.exec(myStr);    //使用exec()方法进行匹配   
+  msg+="目标字符串 :\n"+myStr+"\n";
+  msg+="搜索子串 :\n"+regex+"\n";
+  if(array)
+  {
+    msg+="\nexec()方法搜索结果 : \n找到匹配子串!"   
+       +"\n返回数组 :"+array
+       +"\n数组长度："+array.length;
+  }
+  else
+  {
+    alert("使用exec()方法在目标字符串中未找到子串!");
+    return;
+  }
+  var newarray=myStr.match(regex);  //使用match()方法
+  if (newarray)
+  {
+   msg+="\nmatch()方法搜索结果 :\n找到匹配子串!"  
+      +"\n返回数组 :"+newarray
+      +"\n 数组长度："+newarray.length;
+   alert(msg);
+  }
+  else
+  {
+     alert("使用match()方法在目标字符串中未找到子串!");
+     return;
+  }   
+}*/
+var string = "&1234&wsfsadf&sdf";
+var newstr = string.split("&");
+var html = "";
+alert(newstr.length);
+for(var i = 0;i<newstr.length;i++){
+  html+="<div>"+i+" "+newstr[i]+"</div>"
+}
+alert(html)
+</script>
+</head>
+<body>
+<br>
+<center>
+<p>match()方法和exec()方法的比较</p>
+<form onSubmit="return testmatch();">    　
+  <input type="submit" value="确定">
+</form>
+</center>
+</body>
+</html>

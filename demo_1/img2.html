@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset = "utf-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE = edge,chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name = "format-detection" content = "telephone=no">
+    <title>判断图片是否存在</title>
+    <script type="text/javascript" src = "js/jquery-1.11.3.min.js"></script>
+
+  </head>
+  <body>
+ <div>
+  <img src="http://www.linkhk.com/ShopPhoto/hw1xd2/hw1xd2_201.jpg" />
+  <img src="http://www.linkhk.com/ShopPhoto/hw1xd2/hw1xd2_201.jpg" />
+  <img src="http://www.linkhk.com/ShopPhoto/hw1xd2/hw1xd2_201.jpg" />
+  <img src="http://www.linkhk.com/ShopPhoto/hw1xd2/hw1xd2_201.jpg" />
+  <img src="http://www.linkhk.com/ShopPhoto/hw1xd2/hw1xd2_201.jpg" />
+  </div>
+  <div id="msgTool">
+  
+  </div>
+
+  <script language="javascript" type="text/javascript">
+     
+     $(function (){
+      
+          $("img").each(function (i,e){
+              var imgsrc = $(e).attr("src");
+              $(e).load(function(){
+                   $("<p> ok "+ $(e).width()+":"+$(e).height()+"</p>").appendTo("#msgTool");
+                }).error(function() {
+                   $("<p> error "+ imgsrc  +"</p>").appendTo("#msgTool");
+                   $(e).attr("src","http://www.mainaer.com/uploadfiles/mainaer/nopic.gif");
+                }) ;
+         
+          });
+     /* $("img").each(function(i){
+        var imgsrc = $(this).attr("src");
+        $(this).load(function(){
+           $("<p> ok "+ $(this).width()+":"+$(this).height()+"</p>").appendTo("#msgTool");
+        }).error(function(){
+         
+        })
+      })*/
+      });
+      
+     
+  </script>
+
+  </body>
+</html>

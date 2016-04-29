@@ -1,0 +1,848 @@
+[
+  {
+    "code": "HK",
+    "nameEn": "Hong Kong",
+    "nameTc": "香港",
+    "nameSc": "香港",
+    "districts": [
+      {
+        "id": 17,
+        "nameEn": "Eastern",
+        "nameTc": "港島東",
+        "nameSc": "港岛东",
+        "shopCentres": [
+          {
+            "id": 17,
+            "nameEn": "Fung Wah Estate Retail and Car Park ",
+            "nameTc": "峰華邨商舖及停車場",
+            "nameSc": "峰华邨商舖及停车场"
+          },
+          {
+            "id": 18,
+            "nameEn": "Hing Man Commercial Centre",
+            "nameTc": "興民商場",
+            "nameSc": "兴民商场"
+          },
+          {
+            "id": 19,
+            "nameEn": "Hing Tung Shopping Centre",
+            "nameTc": "興東商場",
+            "nameSc": "兴东商场"
+          },
+          {
+            "id": 20,
+            "nameEn": "Hing Wah Plaza",
+            "nameTc": "興華廣場",
+            "nameSc": "兴华广场"
+          },
+          {
+            "id": 25,
+            "nameEn": "Oi Tung Shopping Centre",
+            "nameTc": "愛東商場",
+            "nameSc": "爱东商场"
+          },
+          {
+            "id": 27,
+            "nameEn": "Siu Sai Wan Plaza",
+            "nameTc": "小西灣廣場",
+            "nameSc": "小西湾广场"
+          },
+          {
+            "id": 35,
+            "nameEn": "Wan Tsui Commercial Complex",
+            "nameTc": "環翠商場",
+            "nameSc": "环翠商场"
+          },
+          {
+            "id": 36,
+            "nameEn": "Yiu Tung Shopping Centre",
+            "nameTc": "耀東商場",
+            "nameSc": "耀东商场"
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "nameEn": "Southern",
+        "nameTc": "港島南",
+        "nameSc": "港岛南",
+        "shopCentres": [
+          {
+            "id": 16,
+            "nameEn": "Ap Lei Chau Estate Retail and Car Park ",
+            "nameTc": "鴨脷洲邨商舖及停車場",
+            "nameSc": "鸭脷洲邨商舖及停车场"
+          },
+          {
+            "id": 23,
+            "nameEn": "Lei Tung Commercial Centre",
+            "nameTc": "利東商場",
+            "nameSc": "利东商场"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "KL",
+    "nameEn": "Kowloon",
+    "nameTc": "九龍",
+    "nameSc": "九龙",
+    "districts": [
+      {
+        "id": 11,
+        "nameEn": "Kowloon City",
+        "nameTc": "九龍城",
+        "nameSc": "九龙城",
+        "shopCentres": [
+          {
+            "id": 60,
+            "nameEn": "Homantin Plaza",
+            "nameTc": "何文田廣場",
+            "nameSc": "何文田广场"
+          },
+          {
+            "id": 61,
+            "nameEn": "Hung Hom Estate Retail and Car Park",
+            "nameTc": "紅磡邨商舖及停車場",
+            "nameSc": "红磡邨商舖及停车场"
+          },
+          {
+            "id": 65,
+            "nameEn": "Oi Man Plaza",
+            "nameTc": "愛民廣場",
+            "nameSc": "爱民广场"
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "nameEn": "Kwun Tong",
+        "nameTc": "觀塘",
+        "nameSc": "观塘",
+        "shopCentres": [
+          {
+            "id": 1,
+            "nameEn": "Choi Fai Estate Retail and Car Park",
+            "nameTc": "彩輝邨商舖及停車場",
+            "nameSc": "彩辉邨商舖及停车场"
+          },
+          {
+            "id": 2,
+            "nameEn": "Choi Ha Estate Retail and Car Park",
+            "nameTc": "彩霞邨商舖及停車場",
+            "nameSc": "彩霞邨商舖及停车场"
+          },
+          {
+            "id": 115,
+            "nameEn": "Hiu Lai Shopping Centre",
+            "nameTc": "曉麗商場",
+            "nameSc": "晓丽商场"
+          },
+          {
+            "id": 21,
+            "nameEn": "Kai Tin Shopping Centre",
+            "nameTc": "啟田商場",
+            "nameSc": "启田商场"
+          },
+          {
+            "id": 22,
+            "nameEn": "Kai Yip Commercial Centre",
+            "nameTc": "啟業商場",
+            "nameSc": "启业商场"
+          },
+          {
+            "id": 122,
+            "nameEn": "Kwong Tin Shopping Centre",
+            "nameTc": "廣田商場",
+            "nameSc": "广田商场"
+          },
+          {
+            "id": 24,
+            "nameEn": "Lei Yue Mun Plaza",
+            "nameTc": "鯉魚門廣場",
+            "nameSc": "鲤鱼门广场"
+          },
+          {
+            "id": 9,
+            "nameEn": "Lok Wah Commercial Centre",
+            "nameTc": "樂華商場",
+            "nameSc": "乐华商场"
+          },
+          {
+            "id": 26,
+            "nameEn": "Ping Tin Shopping Centre",
+            "nameTc": "平田商場",
+            "nameSc": "平田商场"
+          },
+          {
+            "id": 125,
+            "nameEn": "Po Tat Shopping Centre",
+            "nameTc": "寶達商場",
+            "nameSc": "宝达商场"
+          },
+          {
+            "id": 126,
+            "nameEn": "Sau Mau Ping (III) Estate Retail and Car Park",
+            "nameTc": "秀茂坪邨第三期商舖及停車場",
+            "nameSc": "秀茂坪邨第三期商舖及停车场"
+          },
+          {
+            "id": 127,
+            "nameEn": "Sau Mau Ping Shopping Centre",
+            "nameTc": "秀茂坪商場",
+            "nameSc": "秀茂坪商场"
+          },
+          {
+            "id": 67,
+            "nameEn": "Shun Lee Commercial Centre",
+            "nameTc": "順利商場",
+            "nameSc": "顺利商场"
+          },
+          {
+            "id": 69,
+            "nameEn": "Shun Tin Estate Retail and Car Park",
+            "nameTc": "順天邨商舖及停車場",
+            "nameSc": "顺天邨商舖及停车场"
+          },
+          {
+            "id": 129,
+            "nameEn": "Tak Tin Plaza",
+            "nameTc": "德田廣場",
+            "nameSc": "德田广场"
+          },
+          {
+            "id": 30,
+            "nameEn": "Tsui Ping North Shopping Circuit",
+            "nameTc": "翠屏(北)商場",
+            "nameSc": "翠屏(北)商场"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "nameEn": "Sham Shui Po",
+        "nameTc": "深水埗",
+        "nameSc": "深水埗",
+        "shopCentres": [
+          {
+            "id": 57,
+            "nameEn": "Fortune Shopping Centre",
+            "nameTc": "幸福商場",
+            "nameSc": "幸福商场"
+          },
+          {
+            "id": 58,
+            "nameEn": "Fu Cheong Shopping Centre",
+            "nameTc": "富昌商場",
+            "nameSc": "富昌商场"
+          },
+          {
+            "id": 62,
+            "nameEn": "Lai Kok Shopping Centre",
+            "nameTc": "麗閣商場",
+            "nameSc": "丽阁商场"
+          },
+          {
+            "id": 63,
+            "nameEn": "Lei Cheng Uk Shopping Centre",
+            "nameTc": "李鄭屋商場",
+            "nameSc": "李郑屋商场"
+          },
+          {
+            "id": 64,
+            "nameEn": "Nam Cheong Estate Retail and Car Park",
+            "nameTc": "南昌邨商舖及停車場",
+            "nameSc": "南昌邨商舖及停车场"
+          },
+          {
+            "id": 66,
+            "nameEn": "Po Hei Court Commercial Centre",
+            "nameTc": "寶熙苑商場",
+            "nameSc": "宝熙苑商场"
+          },
+          {
+            "id": 75,
+            "nameEn": "Un Chau Shopping Centre",
+            "nameTc": "元州商場",
+            "nameSc": "元州商场"
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "nameEn": "Wong Tai Sin",
+        "nameTc": "黃大仙",
+        "nameSc": "黃大仙",
+        "shopCentres": [
+          {
+            "id": 3,
+            "nameEn": "Choi Wan Commercial Complex",
+            "nameTc": "彩雲商場",
+            "nameSc": "彩云商场"
+          },
+          {
+            "id": 4,
+            "nameEn": "Chuk Yuen Plaza",
+            "nameTc": "竹園廣場",
+            "nameSc": "竹园广场"
+          },
+          {
+            "id": 5,
+            "nameEn": "Fung Tak Shopping Centre",
+            "nameTc": "鳳德商場",
+            "nameSc": "凤德商场"
+          },
+          {
+            "id": 158,
+            "nameEn": "Lions Rise Mall",
+            "nameTc": "現崇山商場",
+            "nameSc": "现崇山商场"
+          },
+          {
+            "id": 7,
+            "nameEn": "Lok Fu Plaza",
+            "nameTc": "樂富廣場",
+            "nameSc": "乐富广场"
+          },
+          {
+            "id": 11,
+            "nameEn": "Temple Mall North",
+            "nameTc": "黃大仙中心北館",
+            "nameSc": "黄大仙中心北馆"
+          },
+          {
+            "id": 14,
+            "nameEn": "Temple Mall South",
+            "nameTc": "黃大仙中心南館",
+            "nameSc": "黄大仙中心南馆"
+          },
+          {
+            "id": 70,
+            "nameEn": "Tin Ma Court Commercial Centre",
+            "nameTc": "天馬苑商場",
+            "nameSc": "天马苑商场"
+          },
+          {
+            "id": 74,
+            "nameEn": "Tsz Wan Shan Shopping Centre",
+            "nameTc": "慈雲山中心",
+            "nameSc": "慈云山中心"
+          },
+          {
+            "id": 12,
+            "nameEn": "Tung Tau Estate Retail and Car Park",
+            "nameTc": "東頭邨商舖及停車場",
+            "nameSc": "东头邨商舖及停车场"
+          },
+          {
+            "id": 13,
+            "nameEn": "Wang Tau Hom (Wang Fai Centre)",
+            "nameTc": "橫頭磡 (宏輝中心)",
+            "nameSc": "横头磡 (宏辉中心)"
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "nameEn": "Yau Tsim Mong",
+        "nameTc": "油尖旺",
+        "nameSc": "油尖旺",
+        "shopCentres": [
+          {
+            "id": 59,
+            "nameEn": "Hoi Fu Shopping Centre",
+            "nameTc": "海富商場",
+            "nameSc": "海富商场"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "NT",
+    "nameEn": "New Territories",
+    "nameTc": "新界",
+    "nameSc": "新界",
+    "districts": [
+      {
+        "id": 9,
+        "nameEn": "Islands",
+        "nameTc": "離島",
+        "nameSc": "离岛",
+        "shopCentres": [
+          {
+            "id": 44,
+            "nameEn": "Fu Tung Plaza",
+            "nameTc": "富東廣場",
+            "nameSc": "富东广场"
+          },
+          {
+            "id": 55,
+            "nameEn": "Yat Tung Shopping Centre",
+            "nameTc": "逸東商場",
+            "nameSc": "逸东商场"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "nameEn": "Kwai Chung and Tsing Yi",
+        "nameTc": "葵涌及青衣",
+        "nameSc": "葵涌及青衣",
+        "shopCentres": [
+          {
+            "id": 38,
+            "nameEn": "Cheung Fat Plaza",
+            "nameTc": "長發廣場",
+            "nameSc": "长发广场"
+          },
+          {
+            "id": 39,
+            "nameEn": "Cheung Hang Shopping Centre",
+            "nameTc": "長亨商場",
+            "nameSc": "长亨商场"
+          },
+          {
+            "id": 40,
+            "nameEn": "Cheung Hong Commercial Centre",
+            "nameTc": "長康商場",
+            "nameSc": "长康商场"
+          },
+          {
+            "id": 42,
+            "nameEn": "Cheung Wang Estate Retail and Car Park",
+            "nameTc": "長宏邨商舖及停車場",
+            "nameSc": "长宏邨商舖及停车场"
+          },
+          {
+            "id": 45,
+            "nameEn": "Kwai Fong Plaza",
+            "nameTc": "葵芳廣場",
+            "nameSc": "葵芳广场"
+          },
+          {
+            "id": 47,
+            "nameEn": "Kwai Shing East Shopping Centre",
+            "nameTc": "葵盛東商場",
+            "nameSc": "葵盛东商场"
+          },
+          {
+            "id": 48,
+            "nameEn": "On Yam Shopping Centre",
+            "nameTc": "安蔭商場",
+            "nameSc": "安荫商场"
+          },
+          {
+            "id": 49,
+            "nameEn": "Shek Lei Shopping Centre Phase I",
+            "nameTc": "石籬商場一期",
+            "nameSc": "石篱商场一期"
+          },
+          {
+            "id": 50,
+            "nameEn": "Shek Lei Shopping Centre Phase II",
+            "nameTc": "石籬商場二期",
+            "nameSc": "石篱商场二期"
+          },
+          {
+            "id": 51,
+            "nameEn": "Shek Wai Kok Commercial Centre",
+            "nameTc": "石圍角商場",
+            "nameSc": "石围角商场"
+          },
+          {
+            "id": 52,
+            "nameEn": "Shek Yam Shopping Centre",
+            "nameTc": "石蔭商場",
+            "nameSc": "石荫商场"
+          },
+          {
+            "id": 56,
+            "nameEn": "Yin Lai Court Shopping Centre",
+            "nameTc": "賢麗苑購物中心",
+            "nameSc": "贤丽苑购物中心"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "nameEn": "North",
+        "nameTc": "新界北",
+        "nameSc": "新界北",
+        "shopCentres": [
+          {
+            "id": 76,
+            "nameEn": "Cheung Wah Shopping Centre",
+            "nameTc": "祥華商場",
+            "nameSc": "祥华商场"
+          },
+          {
+            "id": 77,
+            "nameEn": "Choi Yuen Plaza",
+            "nameTc": "彩園廣場",
+            "nameSc": "彩园广场"
+          },
+          {
+            "id": 80,
+            "nameEn": "Ka Fuk Shopping Centre",
+            "nameTc": "嘉福商場",
+            "nameSc": "嘉福商场"
+          },
+          {
+            "id": 84,
+            "nameEn": "Tai Ping Estate Retail and Car Park",
+            "nameTc": "太平邨商舖及停車場",
+            "nameSc": "太平邨商舖及停车场"
+          },
+          {
+            "id": 87,
+            "nameEn": "Tin Ping Shopping Centre",
+            "nameTc": "天平商場",
+            "nameSc": "天平商场"
+          },
+          {
+            "id": 88,
+            "nameEn": "Wah Ming Shopping Centre",
+            "nameTc": "華明商場",
+            "nameSc": "华明商场"
+          },
+          {
+            "id": 89,
+            "nameEn": "Wah Sum Shopping Centre",
+            "nameTc": "華心商場",
+            "nameSc": "华心商场"
+          },
+          {
+            "id": 92,
+            "nameEn": "Yung Shing Shopping Centre",
+            "nameTc": "雍盛商場",
+            "nameSc": "雍盛商场"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "nameEn": "Sai Kung and Tseung Kwan O",
+        "nameTc": "西貢及將軍澳",
+        "nameSc": "西贡及将军澳",
+        "shopCentres": [
+          {
+            "id": 112,
+            "nameEn": "Choi Ming Shopping Centre",
+            "nameTc": "彩明商場",
+            "nameSc": "彩明商场"
+          },
+          {
+            "id": 113,
+            "nameEn": "Hau Tak (II) Shopping Centre",
+            "nameTc": "厚德(二)商場",
+            "nameSc": "厚德(二)商场"
+          },
+          {
+            "id": 119,
+            "nameEn": "King Lam Shopping Centre",
+            "nameTc": "景林商場",
+            "nameSc": "景林商场"
+          },
+          {
+            "id": 156,
+            "nameEn": "Maritime Bay",
+            "nameTc": "海悅豪園",
+            "nameSc": "海悦豪园"
+          },
+          {
+            "id": 155,
+            "nameEn": "Nan Fung Plaza",
+            "nameTc": "南豐廣場",
+            "nameSc": "南丰广场"
+          },
+          {
+            "id": 124,
+            "nameEn": "Po Lam Shopping Centre",
+            "nameTc": "寶林商場",
+            "nameSc": "宝林商场"
+          },
+          {
+            "id": 128,
+            "nameEn": "Sheung Tak Plaza",
+            "nameTc": "尚德廣場",
+            "nameSc": "尚德广场"
+          },
+          {
+            "id": 131,
+            "nameEn": "Tsui Lam Shopping Centre",
+            "nameTc": "翠林商場",
+            "nameSc": "翠林商场"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "nameEn": "Shatin",
+        "nameTc": "沙田",
+        "nameSc": "沙田",
+        "shopCentres": [
+          {
+            "id": 93,
+            "nameEn": "Chun Shek Shopping Centre",
+            "nameTc": "秦石商場",
+            "nameSc": "秦石商场"
+          },
+          {
+            "id": 94,
+            "nameEn": "Chung On Shopping Centre",
+            "nameTc": "頌安商場",
+            "nameSc": "颂安商场"
+          },
+          {
+            "id": 95,
+            "nameEn": "Heng On Commercial Centre",
+            "nameTc": "恆安商場",
+            "nameSc": "恒安商场"
+          },
+          {
+            "id": 96,
+            "nameEn": "Hin Keng Shopping Centre",
+            "nameTc": "顯徑商場",
+            "nameSc": "显径商场"
+          },
+          {
+            "id": 98,
+            "nameEn": "Kam Ying Court Shopping Centre",
+            "nameTc": "錦英苑商場",
+            "nameSc": "锦英苑商场"
+          },
+          {
+            "id": 99,
+            "nameEn": "Kwong Yuen Shopping Centre",
+            "nameTc": "廣源商場",
+            "nameSc": "广源商场"
+          },
+          {
+            "id": 100,
+            "nameEn": "Lee On Shopping Centre",
+            "nameTc": "利安商場",
+            "nameSc": "利安商场"
+          },
+          {
+            "id": 101,
+            "nameEn": "Lek Yuen Plaza",
+            "nameTc": "瀝源廣場",
+            "nameSc": "沥源广场"
+          },
+          {
+            "id": 102,
+            "nameEn": "Lung Hang Commercial Centre",
+            "nameTc": "隆亨商場",
+            "nameSc": "隆亨商场"
+          },
+          {
+            "id": 103,
+            "nameEn": "Mei Chung Court Retail and Car Park",
+            "nameTc": "美松苑商舖及停車場",
+            "nameSc": "美松苑商舖及停车场"
+          },
+          {
+            "id": 104,
+            "nameEn": "Mei Lam Commercial Centre",
+            "nameTc": "美林商場",
+            "nameSc": "美林商场"
+          },
+          {
+            "id": 105,
+            "nameEn": "Sha Kok Commercial Centre",
+            "nameTc": "沙角商場",
+            "nameSc": "沙角商场"
+          },
+          {
+            "id": 106,
+            "nameEn": "Sui Wo Court Commercial Centre",
+            "nameTc": "穗禾苑商場",
+            "nameSc": "穗禾苑商场"
+          },
+          {
+            "id": 107,
+            "nameEn": "Sun Chui Shopping Centre",
+            "nameTc": "新翠商場",
+            "nameSc": "新翠商场"
+          },
+          {
+            "id": 108,
+            "nameEn": "Sun Tin Wai Commercial Centre",
+            "nameTc": "新田圍商場",
+            "nameSc": "新田围商场"
+          },
+          {
+            "id": 109,
+            "nameEn": "Wo Che Plaza",
+            "nameTc": "禾輋廣場",
+            "nameSc": "禾輋广场"
+          },
+          {
+            "id": 110,
+            "nameEn": "Yiu On Shopping Centre",
+            "nameTc": "耀安商場",
+            "nameSc": "耀安商场"
+          },
+          {
+            "id": 111,
+            "nameEn": "Yu Chui Shopping Centre",
+            "nameTc": "愉翠商場",
+            "nameSc": "愉翠商场"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "nameEn": "Tai Po",
+        "nameTc": "大埔",
+        "nameSc": "大埔",
+        "shopCentres": [
+          {
+            "id": 79,
+            "nameEn": "Fu Shin Shopping Centre",
+            "nameTc": "富善商場",
+            "nameSc": "富善商场"
+          },
+          {
+            "id": 81,
+            "nameEn": "Kwong Fuk Commercial Centre",
+            "nameTc": "廣福商場",
+            "nameSc": "广福商场"
+          },
+          {
+            "id": 85,
+            "nameEn": "Tai Wo Plaza",
+            "nameTc": "太和廣場",
+            "nameSc": "太和广场"
+          },
+          {
+            "id": 86,
+            "nameEn": "Tai Yuen Commercial Centre",
+            "nameTc": "大元商場",
+            "nameSc": "大元商场"
+          },
+          {
+            "id": 90,
+            "nameEn": "Wan Tau Tong Shopping Centre",
+            "nameTc": "運頭塘商場",
+            "nameSc": "运头塘商场"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "nameEn": "Tuen Mun",
+        "nameTc": "屯門",
+        "nameSc": "屯门",
+        "shopCentres": [
+          {
+            "id": 134,
+            "nameEn": "Butterfly Plaza",
+            "nameTc": "蝴蝶廣場",
+            "nameSc": "蝴蝶广场"
+          },
+          {
+            "id": 136,
+            "nameEn": "Fu Tai Shopping Centre",
+            "nameTc": "富泰商場",
+            "nameSc": "富泰商场"
+          },
+          {
+            "id": 157,
+            "nameEn": "H.A.N.D.S",
+            "nameTc": "H.A.N.D.S",
+            "nameSc": "H.A.N.D.S"
+          },
+          {
+            "id": 137,
+            "nameEn": "Kin Sang Shopping Centre",
+            "nameTc": "建生商場",
+            "nameSc": "建生商场"
+          },
+          {
+            "id": 138,
+            "nameEn": "Leung King Plaza",
+            "nameTc": "良景廣場",
+            "nameSc": "良景广场"
+          },
+          {
+            "id": 139,
+            "nameEn": "On Ting Commercial Complex",
+            "nameTc": "安定商場",
+            "nameSc": "安定商场"
+          },
+          {
+            "id": 141,
+            "nameEn": "Sam Shing Commercial Centre",
+            "nameTc": "三聖商場",
+            "nameSc": "三圣商场"
+          },
+          {
+            "id": 142,
+            "nameEn": "Shan King Commercial Centre",
+            "nameTc": "山景商場",
+            "nameSc": "山景商场"
+          },
+          {
+            "id": 144,
+            "nameEn": "Siu Lun Shopping Centre",
+            "nameTc": "兆麟商場",
+            "nameSc": "兆麟商场"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "nameEn": "Yuen Long",
+        "nameTc": "元朗",
+        "nameSc": "元朗",
+        "shopCentres": [
+          {
+            "id": 135,
+            "nameEn": "Chung Fu Plaza",
+            "nameTc": "頌富廣場",
+            "nameSc": "颂富广场"
+          },
+          {
+            "id": 82,
+            "nameEn": "Long Ping Commercial Centre",
+            "nameTc": "朗屏商場",
+            "nameSc": "朗屏商场"
+          },
+          {
+            "id": 147,
+            "nameEn": "Tin Chak Shopping Centre",
+            "nameTc": "天澤商場",
+            "nameSc": "天泽商场"
+          },
+          {
+            "id": 149,
+            "nameEn": "Tin Shui Shopping Centre",
+            "nameTc": "天瑞商場",
+            "nameSc": "天瑞商场"
+          },
+          {
+            "id": 150,
+            "nameEn": "Tin Tsz Shopping Centre",
+            "nameTc": "天慈商場",
+            "nameSc": "天慈商场"
+          },
+          {
+            "id": 151,
+            "nameEn": "Tin Wah Estate Retail and Car Park",
+            "nameTc": "天華邨商舖及停車場",
+            "nameSc": "天华邨商舖及停车场"
+          },
+          {
+            "id": 153,
+            "nameEn": "Tin Yiu Plaza",
+            "nameTc": "天耀廣場",
+            "nameSc": "天耀广场"
+          }
+        ]
+      }
+    ]
+  }
+]

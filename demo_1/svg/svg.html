@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset = "utf-8">
+    <meta content="">
+    <title>svg</title>
+  </head>
+
+  <style>
+  .backsvg{
+    background: rgba(0,0,0,.5) url(svg/face.svg);
+    width: 200px;
+    height: 200px;
+  }
+  .imgsvg{
+    width: 50px;
+    height: 50px;
+  }
+  .imgsvg img{
+    width: 100%;
+    display: block;
+  }
+  .maximgsvg img{
+    width: 400px;
+    height: 400px;
+
+  }
+  </style>
+  <body>
+<!--   <svg id = "svgForStroke" width = "400" height = "200" xmlns = "http://www.w3.org/2000/svg">
+    <g>
+      <line fill = "none" stroke = "#000000" stroke-width = "5" stroke-dasharray = "null" stroke-linejoin = "null" stroke-linecap = "round" x1 = "0" y1 = "90" x2 = "400" y2 = "100" />
+    </g>
+      <g>
+      <line fill = "none" stroke = "#000000" stroke-width = "5" stroke-dasharray = "null" stroke-linejoin = "null" stroke-linecap = "round" x1 = "0" y1 = "190" x2 = "400" y2 = "190" />
+    </g>
+  </svg> -->
+  <svg xmlns = "http://www.w3.org/2000/svg" width = "200" height = "200">
+  <!-- face -->
+    <circle cx = "100" cy = "100" r = "90" fill = "#39F" />
+  <!-- Eyes -->
+    <circle cx = "70" cy = "80" r = "20" fill = "white" />
+    <circle cx = "130" cy = "80" r = "20" fill = "white" />
+    <circle cx = "65" cy = "75" r = "10" fill = "black"/>
+    <circle cx = "125" cy = "75" r = "10" fill = "black" />
+    <!-- Smile -->
+    <path d = "M 50 140 A 60 60 0 0 0 150 140" stroke = "white" stroke-width = "3" fill  = "none" />
+  </svg>
+
+  <div class = "backsvg"></div>
+  <div class = "imgsvg"><img src="svg/face.svg"></div>
+  <div class="maximgsvg"><img src="svg/face.svg"></div>
+  </body>
+</html>

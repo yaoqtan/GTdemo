@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+<title>JQuery模拟滚动条</title>
+
+
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font:12px/180% Arial, Helvetica, sans-serif, "新宋体";}
+/* bd */
+.bd{width:362px;margin:0 auto;margin-top:50px;height:600px;}
+.top{border:1px solid #ccc;height:573px;width:250px;overflow:hidden;float:left;padding:0 5px 5px 5px;}
+.top ul{width:250px;padding-bottom:5px;}
+.top ul li{padding:2px;border:1px solid #ccc;font-size:0px;margin-top:5px;}
+.top ul .li{margin-top:5px}
+.top ul li img{width:244px;height:180px;}
+.scroll{width:6px;margin-left:10px;height:578px;float:left;background:#ccc;position:relative;}
+.scroll p{width:2px;height:61px;background:#000;cursor:auto;left:50%;top:1px;position:absolute;margin-left: -1px;}
+</style>
+
+<script type="text/javascript" src="javascript/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	/*var Bool=false;*/
+	var Scro=$("#scroll");
+	var Scrp=$("#p");
+	var Scrobd=$("#bd");
+	var Scroul=$("#ul");
+/*	var Scrp_Height =Scrp.outerHeight()/2;
+	var Num2=Scro.outerHeight()-Scrp.outerHeight();
+	var offsetX=0;
+	var offsetY=0;
+	var Y = 0;*/
+	/*----yao-------*/
+	var startY = 0;
+	var endY = 0;
+	var oY = 0;
+	var tocuchY = 0;
+
+	/*Scrp.mousedown(function(e){  
+		Bool=true;
+	});
+	$(document).mouseup(function(){
+		Bool=false;
+	});*/
+
+	/*$(document).mousemove(function(e){
+		if(Bool){
+
+			var Num1= e.clientY - Scro.position().top;
+			var y=Num1 - Scrp_Height;
+			if(y<=1){
+				Scrll(0);
+				Scrp.css("top",1);
+			}else if(y>=Num2){
+				Scrp.css("top",Num2);
+				Scrll(Num2);
+			}else{
+				Scrll(y);
+			}
+		}
+	});*/
+	$("#bd").on("touchstart",function(){
+		event.preventDefault()
+        startY = event.targetTouches[0].pageY;
+     /*   alert(startY)*/
+     /*console.log(startY)*/
+
+    });
+	$("#bd").on("touchmove",function(){
+		event.preventDefault()
+      	endY = event.targetTouches[0].pageY;
+      /* console.log("endY"+endY)*/
+      /* alert(endY)*/
+      /* alert(startY-endY)*/
+      if(startY-endY>0){
+      	 oY = 20;
+      	}else{
+      	 oY = -20;
+      	}
+     
+      tocuchY += oY;
+      	Scrp.css("top",tocuchY).css("height",(Scrobd.height()*Scrobd.height())/Scroul.outerHeight()).css("webkitTransition","-webkit-transform .5s ease-out");
+    	Scroul.css("margin-top",-(tocuchY/(Scro.outerHeight()-Scrp.outerHeight()))*(Scroul.outerHeight()-Scrobd.height()))
+
+    });
+    $("#bd").on("touchend",function(){
+    	event.preventDefault()
+    	/*alert(startY - endY);*/
+    	if(tocuchY>417 && -(tocuchY/(Scro.outerHeight()-Scrp.outerHeight()))*(Scroul.outerHeight()-Scrobd.height())<1447){
+    		tocuchY = 417; 
+    		Scrp.css("top",417).css("height",(Scrobd.height()*Scrobd.height())/Scroul.outerHeight());
+    		Scroul.css("margin-top",-1447)
+    	}
+    	if(tocuchY<0 && (tocuchY/(Scro.outerHeight()-Scrp.outerHeight()))*(Scroul.outerHeight()-Scrobd.height())<0){
+    		tocuchY = 0;
+    		Scrp.css("top",0).css("height",(Scrobd.height()*Scrobd.height())/Scroul.outerHeight());
+    		Scroul.css("margin-top",0)
+    	}
+    
+    })
+
+	/*function Scrll(y){
+		Scrp.css("top",y);
+		Scroul.css("margin-top",-(y/(Scro.outerHeight()-Scrp.outerHeight()))*(Scroul.outerHeight()-Scrobd.height()));
+
+	}*/
+	/*if(document.getElementById("scroll_bd").addEventListener){
+	document.getElementById("scroll_bd").addEventListener('touchstart',wheel,true);
+}*/
+	/*document.getElementById("scroll_bd").onmousewheel=wheel;
+	var Distance=Num2*0.1;
+	function wheel(e){
+		var evt = e || window.event;
+		var wheelDelta = evt.wheelDelta || evt.detail;
+		if(wheelDelta == -120 || wheelDelta == 3){
+			var Distances=Scrp.position().top+Distance;
+			if(Distances>=Num2){
+				Scrp.css("top",Num2);
+				Scrll(Num2);
+			}else{
+				Scrll(Distances);
+			}
+			return false;
+		}else if (wheelDelta == 120 || wheelDelta == -3){
+			var Distances=Scrp.position().top-Distance;
+			if(Distances<=1){
+				Scrll(0);
+				Scrp.css("top",1);
+			}else{
+				Scrll(Distances);
+			}
+			return false;
+		}   
+	}*/
+});
+</script>
+
+</head>
+<body>
+
+<div class="bd" id="scroll_bd">
+	<div class="top" id="bd">
+		<ul id="ul">
+			<li><img src="images/1.jpg" /></li>
+			<li><img src="images/2.jpg" /></li>
+			<li><img src="images/3.jpg" /></li>
+			<li><img src="images/4.jpg" /></li>
+			<li><img src="images/5.jpg" /></li>
+			<li><img src="images/1.jpg" /></li>
+			<li><img src="images/2.jpg" /></li>
+			<li><img src="images/3.jpg" /></li>
+			<li><img src="images/4.jpg" /></li>
+			<li><img src="images/5.jpg" /></li>
+		</ul>
+	</div>
+	
+	<div class="scroll" id="scroll">
+		<p id="p"></p>
+	</div>
+</div>
+
+</body>
+</html>

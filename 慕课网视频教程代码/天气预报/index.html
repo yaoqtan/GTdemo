@@ -1,0 +1,205 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>广州天气预报代码调用</title>
+<!--[if IE 6]>
+<script type="text/javascript" mce_src="DD_belatedPNG.js" src="http://www.tianqi.com/static/js/DD_belatedPNG.js"></script>
+<script type="text/javascript">DD_belatedPNG.fix(".pngtqico");</script> 
+<![endif]-->
+<script type="text/javascript" src="http://www.tianqi.com/static/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="http://www.tianqi.com/static/js/ajax.js"></script>
+
+<script language="javascript">
+document.domain="tianqi.com";
+$=function(id){return "string"==typeof id ? document.getElementById(id):id}
+function hide(o){o.style.display='none'}
+function show(o){o.style.display='block'}
+function loadJS(a,d){var b=document.body.appendChild(document.createElement("script"));d="utf-8"||d;b.language="javascript";b.charset=d;b.src=a}
+function SetCookie(c,e,a,f,d){var b=new Date();b.setDate(b.getDate()+365);a=b.toGMTString();f="/";d="tianqi.com";document.cookie=c+"="+escape(e)+("; expires="+a)+("; path="+f)+("; domain="+d)+";"}
+function getCookie(a){var b=a+"=";var c="";if(document.cookie.length>0){offset=document.cookie.lastIndexOf(b);if(offset!=-1){offset+=b.length;end=document.cookie.indexOf(";",offset);if(end==-1){end=document.cookie.length}c=unescape(document.cookie.substring(offset,end))}}return c};
+
+var color = bgcolor = bdcolor = site = icon = "";
+var num = 0;
+
+
+function init(){
+    if(num==0) num=3;
+
+    for (var i=3; i > num; i--) {
+    	$("#day_"+i).remove();
+    }
+
+	if (typeof(icon) != 'undefined' && icon != '') {
+		$("img.pngtqico").each(function(i){
+			this.src = this.src.replace("tianqibig", icon);
+		});
+	}
+}
+
+function getElementsByClassName(className, element) {
+    var children = (element || document).getElementsByTagName('*');
+    var elements = new Array();
+ 
+    for (var i = 0; i < children.length; i++) {
+        var child = children[i];
+        var classNames = child.className.split(' ');
+        for (var j = 0; j < classNames.length; j++) {
+            if (classNames[j] == className) {
+                elements.push(child);
+                break;
+            }
+        }
+    }
+ 
+    return elements;
+}
+
+</script>
+<style type="text/css">
+body{margin:0;padding:0;font-size:12px; font-family:"微软雅黑"}
+body, h1, h2, h3, h4, h5, h6, hr, p, dl, dt, dd, ul, ol, li, pre, fieldset, lengend, textarea, th, td{ margin: 0;padding: 0;}
+em{font-size: 12px;font-weight: normal;font-style: normal;}
+ul{list-style-type:none;margin:0;padding:0;}
+li{list-style-type:none;margin:0;padding:0;}
+img{border:0;text-align:top;}
+a:link,a:visited,a:hover,a:active{color:#333;text-decoration:none;}
+a:hover{color:#333;text-decoration:none;}
+.box{ float:left; width:280px; height:25px; line-height:25px; overflow:hidden;}
+.box strong{float:left; font-size:12px; padding:0 6px 0 0;}
+.box .wtpic{height:22px;width:22px;float:left; padding:0 6px 0 0;}
+.box .wtline{float:left; height:25px; line-height:25px;margin-top:0; padding:0;}
+.box .st{float:left; height:25px; line-height:25px;padding:0 6px;}
+.box .kqzl{float:left; height:25px; line-height:25px;margin-top:0; padding:0 6px 0 0;}
+.box .zl_txt{float:left; height:20px; line-height:20px;margin-top:2px; padding:0 6px; background:#9ED15B; color:#fff;}
+.gk_box{ float:left; width:272px; border:1px solid #dedede; height:150px; position:absolute; top:25px; left:0px;}
+.gk_box .wt{float:left;width:90px;text-align:center;border-right:1px solid #dedede;height:120px;}
+.gk_box .wt_r{float:left;width:90px;text-align:center;border-right: none;}
+.gk_box .wt1{float:left;width:90px; height:30px; line-height:30px;  color:#333;}
+.gk_box .img{margin:0 22px; display:block; float:left;}
+.gk_box .wtpic{line-height:25px;height:20px;float:left;width:100%;}
+.gk_box .wtwt, .gk_box .wtpath{height:20px; line-height:20px; float:left; width:100%; text-align:center;overflow: hidden;}
+.cf00{ color:#cf0000}
+.blue{ color:#06c}
+#box1{ float:left; width:272px; height:120px;}
+#box2{ float:left; width:252px; padding:10px 10px; height:100px; line-height:28px;}
+
+.box_b{ float:left; width:272px; height:28px;line-height:28px;  border-top:1px solid #dedede;background:#f7f7f7;}
+.box_b .pm25{ float:left; padding:0 0 0 10px;} 
+.box_b #setting_btn{ float:right; padding:0 10px 0 16px; text-align:right; background:url(http://www.tianqi.com/static/img/setting_btn.gif) no-repeat 0 7px;} 
+.box_b #return_btn{ float:right; padding:0 10px 0 0; text-align:right;}
+
+#prvgz{ float:left; padding:0 0 6px 0;}
+#ctgz{ float:left; padding:0 0 6px 0;}
+#zngz{ float:left;}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+</style>
+</head>
+<body marginwidth="0" marginheight="0"  style="background-color:transparent">
+
+<div id="mobile280" style="float:left;width:280px; height:25px; position:relative;" >
+	<div class="box"><a target="_blank" href="http://www.tianqi.com/data/html/code_city.php"><strong>广州</strong></a><a target="_blank" href="http://guangzhou.tianqi.com/?zctq"><span class="wtpic"><img class='pngtqico' align='absmiddle' src='http://img.tianqi.com/static/images/tianqi/b4.png' style='border:0;width:20px;height:20px'/></span><span class="wtline">32℃～26℃</span><span class="st">|</span><span class="kqzl">空气质量：</span><span class="zl_txt" style="background:#79b800">优</span></a></div>
+
+</div >
+</body></html>
+
+<script language="javascript">
+function initHeight() {
+    var iframeHeight = document.getElementById('gzdiv').offsetHeight; //document.body.offsetHeight;
+    parent.document.getElementById('gziframe').height = iframeHeight + "px";
+}
+function doback() {
+	location.href=document.referrer;
+	//location.replace(document.referrer);
+}
+var tflag = 1;
+if (tflag) {
+    loadJS("http://www.tianqi.com/weather.php?a=getZoneInfo&type=0");
+    tflag = 0;
+}
+
+function getZoneInfo(json) {
+    var str = '<select id="provincegz" class="unOverSeas_province" onchange="getcity1(this.value)">';
+    for (var key in json[1].py) {
+        if (json[0].value == key) str += "<option value='" + key + "' selected>" + json[1].value[key] + "</option>";
+        else str += "<option value='" + key + "'>" + json[1].value[key] + "</option>";
+    }
+    str += '</select>';
+    //$('prvgz').innerHTML = str;
+    str = '';
+    str += '<select id="citygz" class="unOverSeas_city" onchange="getzone1(this.value)">';
+    for (var key in json[2].py) {
+		if(json[2].defval==key) str += "<option selected py='" + json[2].py[key] + "' value='" + key + "'>" + json[2].value[key] + "</option>";
+        else str += "<option py='" + json[2].py[key] + "' value='" + key + "'>" + json[2].value[key] + "</option>";
+    }
+    str += '</select>';
+    //$('ctgz').innerHTML = str;
+    str = '';
+    str += '<select id="zonegz" class="unOverSeas_children">';
+    for (var key in json[3].py) {
+		if(json[3].defval==key) str += "<option py='" + json[3].py[key] + "' selected value='" + key + "'>" + json[3].value[key] + "</option>";
+        else str += "<option py='" + json[3].py[key] + "' value='" + key + "'>" + json[3].value[key] + "</option>";
+    }
+    str += '</select>';
+    //$('zngz').innerHTML = str;
+}
+function setgz() {
+    /*var zone = $('zonegz').value;
+    var citygz = getCookie('citygz');
+    if (citygz != '') {
+        zone = zone + ',' + citygz;
+    }
+    SetCookie('citygz', zone);*/
+
+	var cityPy = $('zonegz').options[$('zonegz').selectedIndex].getAttribute('py');
+	if (cityPy=="") cityPy = $('citygz').options[$('citygz').selectedIndex].getAttribute('py');
+
+	SetCookie('cityPy',cityPy);
+    location.href=document.referrer;
+}
+function getcity1(p) {
+    loadJS("http://www.tianqi.com/weather.php?a=getZoneInfo&type=1&pid=" + p + "&callback=getcityFun1");
+	document.getElementById("gk_box").style.display='block';
+}
+
+function getzone1(p) {
+    loadJS("http://www.tianqi.com/weather.php?a=getZoneInfo&type=2&cid=" + p + "&pid=" + $('provincegz').value + "&callback=getzoneFun1");
+}
+function getcityFun1(json) {
+    var str = '';
+    for (var key in json[0].py) {
+		if(json[0].defval==key) str += "<option selected py='" + json[0].py[key] + "' value='" + key + "'>" + json[0].value[key] + "</option>";
+        else str += "<option py='" + json[0].py[key] + "' value='" + key + "'>" + json[0].value[key] + "</option>";
+    }
+    str = '<select id="citygz" class="unOverSeas_city" onchange="getzone1(this.value)">' + str + '</select>';
+    $('ctgz').innerHTML = str;
+    str = '';
+    str += '<select id="zonegz" class="unOverSeas_children">';
+    for (var key in json[1].py) {
+		if(json[1].defval==key) str += "<option selected py='" + json[1].py[key] + "' value='" + key + "'>" + json[1].value[key] + "</option>";
+        else str += "<option py='" + json[1].py[key] + "' value='" + key + "'>" + json[1].value[key] + "</option>";
+    }
+    str += '</select>';
+    $('zngz').innerHTML = str;
+}
+function getzoneFun1(json) {
+    str = '';
+    str += '<select id="zonegz" class="unOverSeas_children">';
+    for (var key in json[0].py) {
+		if(json[0].defval==key) str += "<option selected py='" + json[0].py[key] + "' value='" + key + "'>" + json[0].value[key] + "</option>";
+        else str += "<option py='" + json[0].py[key] + "' value='" + key + "'>" + json[0].value[key] + "</option>";
+    }
+    str += '</select>';
+    $('zngz').innerHTML = str;
+}
+</script><script type="text/javascript">num=0;wind=0;temp=0;</script>

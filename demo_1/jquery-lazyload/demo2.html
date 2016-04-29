@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Lazyload</title>
+	<style>
+		.clearfix {
+			overflow: hidden;
+		}
+		#img-wrap {
+			width: 800px;
+			margin: 0 auto;
+		}
+		#img-wrap img {
+			min-height: 250px;
+		}	
+		.triggers span,
+		.item-panel {		
+			float: left;
+		}
+		.triggers span {
+			width: 100px;
+			height: 50px;
+			text-align: center;
+			line-height: 50px;
+			background-color: #CCC;
+			color: #FFF;
+			margin-right: 10px;
+		}
+		.panels {
+			margin-top: 20px;
+		}
+		.item-panel {
+			width: 800px;
+			display: none;
+		}
+		.item-panel1 {
+			display: block;
+		}
+	</style>
+	<script type="text/javascript" src = "../js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src = "jquery.lazyload.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('img').lazyload({
+			    effect: 	"fadeIn",
+			    event: 		'sporty'
+			});
+
+			var $panels = $('.item-panel');
+			var $triggers = $('.triggers span');
+			$('.triggers').on('click', 'span', function(){
+			    var idx = $triggers.index(this);
+			    $panels.siblings().hide()
+			    .end().eq(idx).show().find('img').trigger('sporty');
+			});
+		})
+	</script>
+</head>
+<body>
+	<div id="img-wrap">
+	
+		<div class="clearfix triggers">
+			<span>1</span>
+			<span>2</span>
+			<span>3</span>
+		</div>
+		
+		<div class="clearfix panels">
+			<div class="item-panel item-panel1">
+				<img data-original="http://d1.jiuyan.info/2014/07/25/20450D39-B90C-F976-D10E-025252C5968F.w228.jpg?v=2">
+				<img data-original="http://d6.jiuyan.info/2014/07/24/2865C1C8-7C0A-4818-2326-B638026CB82F.w228.jpg?v=2">
+				<img data-original="http://d5.jiuyan.info/2014/07/24/F05E16A9-9646-63BF-0E86-AC42E94B74E6.w228.jpg?v=2">		
+			</div>
+			
+			<div class="item-panel">
+				<img data-original="http://d4.jiuyan.info/2014/07/25/43EE4AE1-FDFC-BD06-1F0E-DF382DFEB9A1.w228.jpg?v=2">
+				<img data-original="http://d3.jiuyan.info/2014/07/25/6203F076-935B-7918-B8F6-559F27537D62.w228.jpg?v=2">
+				<img data-original="http://d2.jiuyan.info/2014/07/25/BEB11510-298E-4C07-FAAA-C5D47ACED570.w228.jpg?v=2">		
+			</div>
+			
+			<div class="item-panel">
+				<img data-original="http://d1.jiuyan.info/2014/05/14/F00686A6-B8AC-38DA-A8EF-77C03A89B1B9.w228.jpg?v=2">
+				<img data-original="http://d6.jiuyan.info/2014/07/25/AEEA5773-4950-A95E-A777-10F3D0A35776.w228.jpg?v=2">
+				<img data-original="http://d2.jiuyan.info/2014/07/25/F04ED8FD-77D8-C595-EB36-CB57C58EE8BA.w228.jpg?v=2">		
+			</div>		
+		</div>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>json </title>
+<script type="text/javascript">
+
+  function testJson(){
+    var user = 
+    {
+      "name":"tom",
+      "age":11,
+      "info":{"tel":"lf","cellphone":"1223"},
+      "address":
+        [
+            {"city":"lf","postcode":"111"},
+            {"city":"bj","postcode":"222"},
+        ]
+    }
+      
+    alert(user.name);
+    alert(user.info.cellphone);
+    alert(user.address[1].postcode);    
+  }
+</script>
+</head>
+<body>
+  <input type="button" value="TestJson" onclick="testJson()">
+</body>
+  
+</body>
+</html>

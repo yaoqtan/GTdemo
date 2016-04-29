@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <canvas id = "canvas" style = "display:block;margin:0 auto;border:1px solid #aaa;">
+        不支持canvas
+    </canvas>
+    <input type = "range" id = "scale-range" min = "0.5" step = "0.01" value="1.0" max = "3" style = "display:block;margin:20px auto;width:400px" />
+    <script type="text/javascript">
+        var canvas = document.getElementById("canvas");
+        var context = canvas.getContext("2d");
+        var slider = document.getElementById("scale-range");
+        var image = new Image();
+        window.onload = function(){
+            canvas.width = 576;
+            canvas.height=384;
+
+            /*context.fillStyle = 'red';
+            context.fillRect(100,100,400,400);*/
+
+            var scale = slider.value;
+
+            image.src = "img-lg.jpg";
+            image.onload = function(){
+                context.drawImage(image,0,0,canvas.width,canvas.height);
+                //context.drawImage(images,sx,sy,sw,sh,dx,dy,dw,dh);
+               drawImageByScale(scale);
+               slider.onmousemove = function(){
+                scale = slider.value;
+                drawImageByScale(scale);
+               }
+            }
+        }
+        function drawImageByScale(scale){
+            var imageWidth = 576 * scale;
+            var imageHeight = 384 * scale;
+
+            var dx = canvas.width / 2 - imageWidth / 2;
+            var dy = canvas.height / 2 - imageHeight / 2;
+            context.clearRect( 0 , 0 , canvas.width , canvas.height )
+            context.drawImage(image,dx,dy,imageWidth,imageHeight) 
+        }
+
+    </script>
+</body>
+</html>

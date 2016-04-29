@@ -1,0 +1,120 @@
+
+
+
+$(".about div").niceScroll({   
+    touchbehavior : false, // 是否在触摸屏下使用
+    cursorcolor : "#866550", // 滚动条颜色
+    cursoropacitymax : 1, // 滚动条是否透明
+    cursorwidth : 7, // 滚动条宽度
+    horizrailenabled : false, // 是否水平滚动
+    cursorborderradius : 0, // 滚动条是否圆角大小
+    autohidemode : false, // 是否隐藏滚动条
+    cursorborder : 0 // 滚动条边框大小
+});
+
+// 防止拉动事不触发document的click,也就是不冒泡
+$(".about div").bind("click", function(e){
+    var ev = e || event;
+    ev.stopPropagation();
+    return false;
+});
+
+
+
+
+
+
+
+
+/*
+          $(this).find(".nav-item2>div").css({
+                "height":100,  
+                 "webkitTransform":"translate3d(0px, 0px, 0px)",
+                 "display":"block",
+         })
+        $(this).find(".nav-item2").find("ul").css({
+                "webkitTransform":"translate3d(0px, 0px, 0px)",
+                "height":heightli,
+        })
+        var outer =$(this).find(".nav-item2");
+        var startX;
+        var endX;
+        var offsetX;
+        var tocuchX = 0;
+        outer.on("touchstart",function(){
+            startX = event.targetTouches[0].pageY;
+
+       });
+        var divY;
+        outer.on('touchmove', function(){
+            endX = event.targetTouches[0].pageY;
+            offsetX = endX-startX;
+            if(offsetX>0){
+                offsetX = 40
+            }else{
+                offsetX = -40
+            }
+            tocuchX+=offsetX;  
+           
+            divY= -tocuchX
+            if( divY >= 0 && divY <=80){
+              outer.children("div").css({
+                
+                   "webkitTransform":"translate3d(0px, "+divY+"px, 0px)",
+                   "webkitTransition":"-webkit-transform .5s ease-out",
+              }) ;
+            } 
+         
+        });
+        outer.on('touchend', function(){
+     
+        });*/
+
+
+
+
+
+
+        /*  $(".nav-item1").eq(i-1).find(".navon").find(".nav-item2>div").css({
+                "height":100,  
+                 "webkitTransform":"translate3d(0px, 0px, 0px)",
+                 "display":"block",
+         })
+        $(".nav-item1").eq(i-1).find(".navon").find(".nav-item2").find("ul").css({
+                "webkitTransform":"translate3d(0px, 0px, 0px)",
+                "height":heightli,
+        })
+        var outer =$(".nav-item1").eq(i-1).find(".navon").find(".nav-item2");
+        var startX;
+        var endX;
+        var offsetX;
+        var tocuchX = 0;
+        outer.on("touchstart",function(){
+            startX = event.targetTouches[0].pageY;
+
+       });
+        var divY;
+        outer.on('touchmove', function(){
+            endX = event.targetTouches[0].pageY;
+            offsetX = endX-startX;
+            if(offsetX>0){
+                offsetX = 40
+            }else{
+                offsetX = -40
+            }
+            tocuchX+=offsetX;  
+           
+            divY= -tocuchX
+            if( divY >= 0 && divY <=80){
+              outer.children("div").css({
+                
+                   "webkitTransform":"translate3d(0px, "+divY+"px, 0px)",
+                   "webkitTransition":"-webkit-transform .5s ease-out",
+                   
+              }) ;
+            } 
+         
+        });
+        outer.on('touchend', function(){
+     
+        });*/

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset = "utf-8">
+    <meta content="">
+    <title>Window</title>
+    <!-- <link rel="stylesheet" type="text/css" href="css/common.css"> -->
+  </head>
+
+  <body>
+    <script type="text/javascript">
+      console.log(Navigator)
+    </script>
+    <div id="example"></div>
+
+  <script>
+
+  txt = "<p>Browser CodeName: " + navigator.appCodeName + "</p>";
+  txt+= "<p>Browser Name: " + navigator.appName + "</p>";
+  txt+= "<p>Browser Version: " + navigator.appVersion + "</p>";
+  txt+= "<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>";
+  txt+= "<p>Platform: " + navigator.platform + "</p>";
+  txt+= "<p>User-agent header: " + navigator.userAgent + "</p>";
+  txt+= "<p>User-agent language: " + navigator.systemLanguage + "</p>";
+
+  document.getElementById("example").innerHTML=txt;
+
+</script>
+  </body>
+</html>

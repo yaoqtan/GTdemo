@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <meta charset="UTF-8">
+        <title>
+            正方形
+        </title>
+        <style>
+              html, body, div, span,
+        h1, h2, h3, h4, h5, h6, p
+        a, img, ol, ul, li
+        {
+            margin:0;padding:0;border:0;outline:0;
+        }
+        #ex{
+            -webkit-perspective:800;
+            -webkit-perspective-origin:50% 50%;
+
+        }
+        #cube{
+            -webkit-transform-style:preserve-3d;
+            margin: 100px auto;
+            width: 200px;
+            height: 200px;
+            position: relative;
+
+        }
+        .page{
+            position: absolute;
+            height: 160px;
+            width: 160px;
+            padding: 20px;
+            background: black;
+            color: #fff;
+            text-align: center;
+            font-weight: 700;
+            font-size: 160px;
+            line-height: 160px;
+            -webkit-transition:-webkit-transform 1s linear;
+        }
+
+        #page1{
+
+        }
+
+        #page2{
+            -webkit-transform-origin:right;
+            -webkit-transform:rotateY(-90deg);
+        }
+        #page3{
+             -webkit-transform-origin:left;
+            -webkit-transform:rotateY(90deg);
+        }
+        #page4{
+             -webkit-transform-origin:top;
+            -webkit-transform:rotateX(-90deg);
+        }
+        #page5{
+             -webkit-transform-origin:bottom;
+            -webkit-transform:rotateX(90deg);
+        }
+        #page6{
+             
+            -webkit-transform:translateZ(-200px);
+        }
+
+          #op{
+            margin:0 auto;
+            font-size:16px;
+            font-weight:bold;
+            width:800px;
+        }
+        #op .range-control{width:721px;}
+        </style>
+        <script type="text/javascript">
+        function rotate(){
+            var x = document.getElementById("rotatex").value;
+            var y = document.getElementById("rotatey").value;
+            var z = document.getElementById("rotatez").value;
+
+            document.getElementById("cube").style.webkitTransform = "rotateX("+x+"deg) rotateY("+y+"deg) rotateZ("+z+"deg)";
+            document.getElementById("degx-span").innerText=x;
+            document.getElementById("degy-span").innerText=y;
+            document.getElementById("degz-span").innerText=z;
+        }
+
+        </script>
+    </head>
+    <body>
+        <div id = "ex">
+            <div id = "cube">
+              <div class = "page" id = "page1">1</div>
+              <div class = "page" id = "page2">2</div>
+              <div class = "page" id = "page3">3</div>
+              <div class = "page" id = "page4">4</div>
+              <div class = "page" id = "page5">5</div>
+              <div class = "page" id = "page6">6</div>
+            </div>
+        </div>
+        <div id = "op">
+             <p>rotate x: <span id="degx-span">0</span> deg</p>
+            <input type="range" min="-360" max="360" id="rotatex" value="0" class="range-control" onchange="rotate()" /><br/>
+            <p>rotate y: <span id="degy-span">0</span> deg</p>
+            <input type="range" min="-360" max="360" id="rotatey" value="0" class="range-control" onchange="rotate()" /><br/>
+            <p>rotate z: <span id="degz-span">0</span> deg</p>
+            <input type="range" min="-360" max="360" id="rotatez" value="0" class="range-control" onchange="rotate()" /><br/>
+
+        </div>
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

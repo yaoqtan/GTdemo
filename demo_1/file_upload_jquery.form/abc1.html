@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src = "../js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+      $("#button").on("click",function() {
+            var files = $('#file').files
+            // 演示使用，仅使用1个文件
+            var file = files[0]
+          
+          //alert($("input[name = 'multipartFiles']").attr("name"))
+          var form = new FormData($("#form1"));
+          
+         form.append("name",$("input[name = 'name']").val());
+         form.append("mobile",$("input[name = 'mobile']").val());
+         form.append("password",$("input[name = 'password']").val());
+         form.append("gender",$("input[name = 'gender']").val());
+
+          form.append("multipartFiles",encodeURIComponent(file.name));
+          form.append("file",file)
+
+          form.append("uploadFields",$("input[name = 'uploadFields']").val());
+          form.append("lang",$("input[name = 'lang']").val());
+
+        $.ajax({
+          url:"http://uat.gtomato.com/aladdin/api/common/register",
+          //contentType: 'multipart/form-data',
+          //data:$("input[type = 'file']").serialize(),
+          dataType   : "json",
+          processData:false,
+          ContentType:'multipart/form-data',
+         // contentType: "application/json",
+          data:form,
+          type       :"POST",
+          success    : function(data){
+            console.log("cuccess");
+          },
+          error      : function(data){
+            console.log("error");
+          },
+        });
+      })
+     })
+    </script>
+</head>
+<body>
+   <form id = "form1">
+       <div class="1_common-register-1_0_0-sample-request-param-fields">
+           <div class="control-group">
+               <label class="control-label" for="sample-request-param-field-name">name</label>
+               <div class="controls">
+                   <div class="input-append">
+
+                       <input type="text" name="name" class="input-xxlarge sample-request-param" data-sample-request-param-name="name" data-sample-request-param-group="sample-request-param-0">
+                       <span class="add-on">String</span>
+                   </div>
+               </div>
+           </div>
+           <div class="control-group">
+               <label class="control-label" for="sample-request-param-field-mobile">mobile</label>
+               <div class="controls">
+                   <div class="input-append">
+
+
+                       <input type="text" name="mobile" value="74108520"  class="input-xxlarge sample-request-param" data-sample-request-param-name="mobile" data-sample-request-param-group="sample-request-param-0">
+                       <span class="add-on">String</span>
+                   </div>
+               </div>
+           </div>
+           <div class="control-group">
+               <label class="control-label" for="sample-request-param-field-password">password</label>
+               <div class="controls">
+                   <div class="input-append">
+
+
+                       <input type="text" name="password" class="input-xxlarge sample-request-param" data-sample-request-param-name="password" data-sample-request-param-group="sample-request-param-0">
+                       <span class="add-on">String</span>
+                   </div>
+               </div>
+           </div>
+           <div class="control-group">
+               <label class="control-label" for="sample-request-param-field-gender">gender</label>
+               <div class="controls">
+                   <div class="input-append">
+
+
+                       <input type="text" name="gender" value="0" class="input-xxlarge sample-request-param" data-sample-request-param-name="gender" data-sample-request-param-group="sample-request-param-0">
+                       <span class="add-on">String</span>
+                   </div>
+               </div>
+           </div>
+           <div class="control-group">
+               <label class="control-label" for="sample-request-param-field-multipartFiles">multipartFiles</label>
+               <div class="controls">
+                   <div class="input-append">
+
+
+                      <input id = "file" type="file" name="multipartFiles" class="input-xxlarge sample-request-param" data-sample-request-param-name="multipartFiles" data-sample-request-param-group="sample-request-param-0"> 
+                       <span class="add-on">file</span>
+                   </div>
+               </div>
+           </div>
+           <div class="control-group">
+               <label class="control-label" for="sample-request-param-field-uploadFields">uploadFields</label>
+               <div class="controls">
+                   <div class="input-append">
+
+
+                       <input type="text" value="imageUrl" name="uploadFields" class="input-xxlarge sample-request-param" data-sample-request-param-name="uploadFields" data-sample-request-param-group="sample-request-param-0">
+                       <span class="add-on">String</span>
+                   </div>
+               </div>
+           </div>
+
+           <div class="control-group">
+               <label class="control-label" for="sample-request-param-field-">lang</label>
+               <div class="controls">
+                   <div class="input-append">
+                       <input type="text" value="zh_TW" name="lang" class="input-xxlarge sample-request-param" data-sample-request-param-name="lang" data-sample-request-param-group="sample-request-param-0">
+                       <span class="add-on">String</span>
+                   </div>
+               </div>
+           </div>
+
+       </div>
+       <!-- <input type="submit"> -->
+       <input type="button" id = "button" value="提交">
+   </form>
+</body>
+</html>

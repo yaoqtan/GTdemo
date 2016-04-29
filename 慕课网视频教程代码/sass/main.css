@@ -1,0 +1,198 @@
+@charset "UTF-8";
+@import url(reset.css);
+body {
+  background: #999;
+}
+
+body {
+  background: red;
+}
+
+.test1 {
+  width: 100px;
+  height: 100px;
+  background: #1875e7;
+}
+
+.rounded {
+  border-left-radius: 80px;
+}
+
+.test2 {
+  margin: 7px;
+  top: 54px;
+  right: 110px;
+}
+
+.car {
+  margin: 10px;
+}
+.car .bwm {
+  margin: 20px;
+}
+
+/*嵌套*/
+.fa {
+  border-style: solid;
+  border-left-width: 4px;
+  border-left-color: red;
+  border-right-width: 4px;
+}
+
+a:hover {
+  color: red;
+}
+
+/*继承*/
+h1, .speaker {
+  border: 4px solid #ccc;
+}
+
+.speaker {
+  border-width: 2px;
+}
+
+/*无参数mixin*/
+.demo {
+  margin: auto;
+  padding: 0px;
+}
+
+/*mixin有参数*/
+.line {
+  border-bottom: 7px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.line li {
+  border-bottom: 5px solid #ccc;
+  padding: 90px;
+  margin-top: 90px;
+}
+
+/*占位选择器*/
+#header h1, #header .speaker, .ir {
+  color: transparent;
+  text-shadow: none;
+  background: transparent;
+  border: 0;
+}
+
+#header h1:before, #header .speaker:before, #header h1:after, #header .speaker:after {
+  content: "";
+  display: table;
+  font: 0/0 a;
+}
+
+#header h1, #header .speaker {
+  width: 200px;
+}
+
+/*函数*/
+body {
+  font-size: 10px;
+  color: #e6e6e6;
+}
+
+.test {
+  font-size: 1.6rem;
+  color: #b3b3b3;
+}
+
+/*自定义函数*/
+#sidebar {
+  width: 10px;
+}
+
+/*条件判断*/
+.ib {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+p {
+  color: green;
+}
+
+/*三目判断
+if(true , 1px , 2px) ==> 1px;
+if(false , 1px , 2px) ==>2px;
+*/
+/*循环语句*/
+.item-1 {
+  width: 2em;
+}
+
+.item-2 {
+  width: 4em;
+}
+
+.item-3 {
+  width: 6em;
+}
+
+/*@each循环*/
+.puma-icon {
+  background: url("/images/puma.png");
+}
+
+.sea-slug-icon {
+  background: url("/images/sea-slug.png");
+}
+
+.egret-icon {
+  background: url("/images/egret.png");
+}
+
+.salamander-icon {
+  background: url("/images/salamander.png");
+}
+
+/*@each多字段list数据循环*/
+.puma-icon {
+  background: url("/images/puma.png");
+  border: 2px solid black;
+  cursor: default;
+}
+
+.sea-slug-icon {
+  background: url("/images/sea-slug.png");
+  border: 2px solid blue;
+  cursor: pointer;
+}
+
+.egret-icon {
+  background: url("/images/egret.png");
+  border: 2px solid white;
+  cursor: move;
+}
+
+/*@each多个字段map数据循环*/
+h1, .speaker {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+/*while循环*/
+.item-6 {
+  width: 12em;
+}
+
+.item-4 {
+  width: 8em;
+}
+
+.item-2 {
+  width: 4em;
+}
+
+/*# sourceMappingURL=main.css.map */

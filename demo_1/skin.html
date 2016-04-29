@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>html5换肤</title>
+<script src="js/jquery-1.11.3.min.js" type="text/javascript" language="javascript"></script>
+<script>
+$(function(){
+ var one = $('#pf');
+ var link_href = localStorage.getItem('link_h');
+ one.attr({href:link_href});
+ $('#btn input').each(function(index) {
+        $(this).click(function(){
+   console.log('css/style'+(index+1)+'.css');
+   one.attr({href:'css/style'+(index+1)+'.css'});
+   var t1 = one.attr('href');
+   localStorage.setItem('link_h',t1);
+  });
+    });
+ 
+}); 
+</script>
+<link type="text/css" rel="stylesheet" id="pf" href="css/style1.css"/>
+<style>
+body{ margin:0; padding:0; }
+.main{ width:400px; height:300px; margin:100px auto; text-align:center; line-height:300px;}
+.btn{ margin:50px auto; width:400px; text-align:center;}
+</style>
+</head>
+
+<body>
+<div class="main">
+  html5换肤,换肤之后试试刷新
+</div>
+<div class="btn" id="btn">
+  <input type="button" value="1"/>
+  <input type="button" value="2"/>
+  <input type="button" value="3"/>
+  <input type="button" value="4"/>
+</div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no" />
+	<title>Document</title>
+	<style>
+	*{margin:0;padding:0;}
+	.div1{width:100%;}
+	img{width:100%;}
+	.div2{width:20%;padding-bottom:20%;margin-left:30%;}
+	.tupian,.beijing{display:inline-block;width:30%;height:30px;line-height:30px;text-align:center;font-size:14px;background:#f0f0f0; margin:30px 30%;}
+	</style>
+</head>
+<body>
+	<input type="file" capture="camera" accept="image/*" id="file1" name="image8" style="display:none;" />
+	<span class="tupian">图片</span>
+	<div class="div1"></div>
+	<input type="file" capture="camera" accept="image/*" id="file2" name="image8" style="display:none;"/>
+	<span class="beijing">背景</span>
+	<div class="div2"></div>
+	
+	
+</body> 
+<script src="js/zepto.min.js"></script>
+<script>
+
+//插入图片
+
+function readAsDataURL1(){  
+    //检验是否为图像文件 
+    var results = document.querySelector('.div1');   
+    var file = document.querySelector('#file1').files[0];  
+    if(!/image\/\w+/.test(file.type)){  
+     	
+       // alert("看清楚，这个需要图片！");  
+        return false;  
+    }  
+
+    var reader = new FileReader();  
+    //将文件以Data URL形式读入页面  
+    reader.readAsDataURL(file);  
+    reader.onload=function(e){  
+         
+        //显示文件  
+   results.innerHTML ='<img src="' + this.result +'"/>';
+       
+      
+
+    }  
+}
+
+$('#file1').change(function(){
+	
+	readAsDataURL1();
+})
+$('.tupian').on('click',function(){
+	return $('#file1').click();
+})
+
+
+//照片作为背景
+function readAsDataURL2(){  
+    //检验是否为图像文件 
+    var results = document.querySelector('.div2');   
+    var file = document.querySelector('#file2').files[0];  
+    if(!/image\/\w+/.test(file.type)){  
+     	
+       // alert("看清楚，这个需要图片！");  
+        return false;  
+    }  
+
+    var reader = new FileReader();  
+    //将文件以Data URL形式读入页面  
+    reader.readAsDataURL(file);  
+    reader.onload=function(e){  
+         
+        //显示文件  
+   //results.innerHTML ='<img src="' + this.result +'"/>';
+   results.style.background = 'url(' + this.result + ') no-repeat center center';
+   results.style.backgroundSize = 'cover';
+       
+      
+
+    }  
+}
+
+$('#file2').change(function(){
+	readAsDataURL2();
+});
+$('.beijing').on('click',function(){
+	return $('#file2').click();
+})
+</script>
+</html>

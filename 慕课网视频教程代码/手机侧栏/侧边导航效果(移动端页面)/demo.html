@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name="apple-touch-fullscreen" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<title>移动端页面侧边导航滑入效果</title>
+<script src="js/jquery-2.1.1.min.js"></script>
+<link rel="stylesheet" href="css/index.css">
+</head>	
+<body>
+
+<div class="wrapper">
+	<div class="container">
+		<header>
+			<h1><a href="javascript:;" class="slide-menu"><img src="images/menu.png" alt=""></a>花花姑娘</h1>
+		</header>
+	<!-- 	<div class="imgbox">
+			<img src="images/img1.jpg" alt="">
+			<img src="images/img2.jpg" alt="">
+			<img src="images/img3.jpg" alt="">
+			<img src="images/img4.jpg" alt="">
+			<img src="images/img5.jpg" alt="">
+			<img src="images/img6.jpg" alt="">
+			<img src="images/img7.jpg" alt="">
+			<img src="images/img8.jpg" alt="">
+			<img src="images/img9.jpg" alt="">	
+		</div> -->
+	</div>
+</div>
+
+<!-- 侧边导航 -->
+<div class="slide-mask"></div>
+<aside class="slide-wrapper">
+  <div>
+	<div>
+	  <strong>花花姑娘</strong>
+	</div>
+	<ul>
+	  <li><a href="#">花花姑娘</a></li>
+	  <li><a href="#">花花姑娘</a></li>
+	  <li><a href="#">花花姑娘</a></li>
+	  <li><a href="#">花花姑娘</a></li>
+	  <li><a href="#">花花姑娘</a></li>
+	  <li><a href="#">花花姑娘</a></li>
+	  <li><a href="#">花花姑娘</a></li>
+	  <li><a href="#">花花姑娘</a></li>
+	  <li><a href="#">花花姑娘</a></li>
+	</ul>
+  </div>
+</aside>
+<footer>
+	chic 2014/11/29 出品
+</footer>
+<script type="text/javascript">
+$(function(){
+	$('aside.slide-wrapper').on('touchstart', 'li', function(e){
+		$(this).addClass('current').siblings('li').removeClass('current');
+	});
+	
+	$('a.slide-menu').on('click', function(e){
+		var wh = $('div.wrapper').height();
+		$('div.slide-mask').css('height', wh).show();
+		$('aside.slide-wrapper').css('height', wh).addClass('moved');
+	});
+	
+	$('div.slide-mask').on('click', function(){
+		$('div.slide-mask').hide();
+		$('aside.slide-wrapper').removeClass('moved');
+	});
+});
+</script>
+</body>
+</html>
+
+
+

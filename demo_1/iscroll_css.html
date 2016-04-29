@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+  <title>Iscroll demo</title>
+  <script type="text/javascript" src = "http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      $("body, ul, li, div, p, h1, table, th, tr, td, h4").css({
+        "margin":0,
+        "padding":0,
+        "border":0
+      });
+      $("ul,li").css({
+        "listStyle":"none"
+      })
+
+
+    /* $(".wrap-item").css({
+      "width":"100%",
+      "height":"100%",
+      "overflow":"scroll"
+     })*/
+     
+     //wrap-time
+     $(".wrap-time").css({
+      "width":"15%",
+      "display":"inline",
+      "float":"left"
+     });
+     //#wrapper
+     $("#wrapper").css({
+      "position":"relative",
+      "overflow":"hidden",
+      "width":"84%",
+      "float":"left",
+      "display":"inline"
+     });
+     //#scroller
+     $("#scroller").css({
+      "width":"100%",
+      "height":"100%",
+      "overflow":"scroll"
+     });
+     //table
+     $("table").css({
+      "borderRight":"1px solid #ccc",
+      "borderBottom":"1px solid #ccc",
+      "width":"1050px"
+     });
+     $("tr").css({
+      "height":"50px"
+     })
+    $("th,td").css({
+      "borderLeft":"1px solid #ccc",
+      "borderTop":"1px solid #ccc",
+      "width":"150px"
+    });
+    $("th").css("height","50px");
+    $("th div").css({"fontSize":"20px","lineHeight":"100%","textAlign":"center"});
+    $("th p").css({"fontSize":"16px","lineHeight":"100%","textAlign":"center"});
+    $("td div").css({
+      "minHeight":"60px",
+      "margin":"1px 2px",
+      "padding":"5px 0 5px 5px",
+      "boxSizing":"border-box",
+      "color":"#fff",
+      "border":"1px soild #fff",
+      "borderRadius":"5px",
+      "lineHeight":"1",
+      "background":"#4298ba"
+    });
+    $("td span").css({
+      "display":"inline-block",
+      "background":"#fff",
+      "color":"#4298ba",
+      "padding":"2px",
+      "fontSize":"14px",
+      "margin":"1px"
+    });
+    $("table tr").each(function(i){
+        var trheight = $(this).height();
+       $(".wrap-time").find("li").eq(i).css({
+        "minHeight":"50px",
+        "height":trheight,
+        //"lineHeight":trheight+"px",
+        "textAlign":" center"
+       })
+      
+     });
+    var tableheight = $("table").height();
+     $(".wrap").css({
+      "width":"100%",
+      "height":tableheight,
+      "overflowX":"hidden"
+     });
+     //alert(new Date('2016/4/12').getDay())
+  });
+  </script>
+  <style type="text/css">
+   /*  body,ul,li,div,p,h1,table,th,tr,td,h4{
+   margin: 0;
+   padding: 0;
+   border:0;
+     }
+   
+     ul,li{
+   list-style:none;
+     }
+     .fr,.fl{
+   display: inline;
+     }
+     .fr{
+   float: right;
+     }
+     .fl{
+   float: left;
+     }
+     .clearfix{
+   zoom:1;
+     }
+     .clearfix:after{
+   content:" ";
+   display: block;
+   font-size: 0;
+   height: 0;
+   width: 0;
+   overflow: hidden;
+   
+     }
+     .wrap{
+   height: 615px;
+     }
+     .wrap-time{
+   width: 15%;
+   display: inline-block;
+     }
+     .wrap-time li{
+   height: 50px;
+   line-height: 50px;
+   text-align: center;
+     }
+     .wrapper{
+   width: 85%;
+   display: inline-block;
+   overflow: hidden;
+   
+     }
+     #wrapper {
+     position: relative;
+     overflow: hidden;
+   }
+   
+   #scroller {
+     -webkit-tap-highlight-color: rgba(0,0,0,0);
+     width: 100%;
+     height: 100%;
+     overflow: scroll;
+   
+   }
+   
+   #scroller ul {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+     width: 100%;
+     height: 100%;
+     text-align: center;
+   }
+     table{
+   border-right:1px solid #ccc;
+   border-bottom: 1px solid #ccc;
+   width: 1050px;
+     }
+      th,td{
+   border-top:1px solid #ccc;
+   border-left: 1px solid #ccc;
+   width: 150px;
+     }
+     th div{
+   font-size: 20px;
+     }
+     th p{
+   font-size: 16px;
+     }
+     td div{
+   min-height: 60px;
+   margin:0 2px;
+   padding: 5px 0 5px  5px;
+   box-sizing: border-box;
+   background: #4298ba;
+   color: #fff;
+   border:1px solid #fff;
+   border-radius: 5px;
+     }
+     td span{
+   display: inline-block;
+   background: #fff;
+   color: #4298ba;
+   padding: 2px;
+   font-size: 14px;
+   margin:1px;
+     }
+     th{
+   height: 50px;
+     } */
+  </style>
+</head>
+<body>
+
+<div class = "wrap">
+  <div class = "wrap-item">
+    <div class = "wrap-time fl">
+      <ul>
+        <li></li>
+        <li>8:00</li>
+        <li>8:00</li>
+        <li>8:00</li>
+        <li>8:00</li>
+        <li>8:00</li>
+        <li>8:00</li>
+        <li>8:00</li>
+        <li>8:00</li>
+        <li>8:00</li>
+        <li>8:00</li>
+      </ul>
+    </div>
+    <div class = "wrapper fl" id = "wrapper">
+      <div id = "scroller" class = "scroller">
+        <table  cellpadding="10px" cellspacing="0">
+          <tr>
+            <th>
+            <div>215</div>
+            <p>一</p>
+            </th>
+            <th>
+            <div>26</div>
+            <p>二</p>
+            </th>
+            <th>
+            <div>27</div>
+            <p>三</p>
+            </th>
+            <th>
+            <div>28</div>
+            <p>四</p>
+            </th>
+            <th>
+            <div>29</div>
+            <p>五</p>
+            </th>
+            <th>
+            <div>30</div>
+            <p>六</p>
+            </th>
+            <th>
+            <div>31</div>
+            <p>七</p>
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <div>
+                <h4>测试</h4>
+                <span>电话跟进</span>
+                <span>电话跟进</span>
+                <span>电话跟进</span>
+              </div>
+
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>
+                <h4>测试</h4>
+                <span>电话跟进</span>
+                <span>电话跟进</span>
+                <span>电话跟进</span>
+                <span>电话跟进</span>
+                <span>电话跟进</span>
+                <span>电话跟进</span>
+                <span>电话跟进</span>
+                <span>电话跟进</span>
+                <span>电话跟进</span>
+                <span>电话跟进</span>
+                <span>电话跟进</span>
+                <span>电话跟进</span>
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+               
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+       
+              </div>
+            </td>
+            <td>
+              <div>
+                
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>
+               
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+            <td>
+              <div>
+                测试
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>Javascript 返回顶部</title>
+	<style type="text/css">
+		#btn {width:40px; height:40px; position:fixed; right:65px; bottom:10px; display:none; background:url(images/top_bg.png) no-repeat left top;}
+		#btn:hover {background:url(images/top_bg.png) no-repeat 0 -39px;}
+		.bg {width:1190px; margin:0 auto;}
+	</style>
+	<script>
+	window.onload = function(){
+		var btn = document.getElementById("btn");
+		var clientHeight = document.documentElement.clientHeight;
+		/*alert(clientHeight)*/
+		var timer = null;
+		var isTop = true;
+
+		window.onscroll = function(){
+			//获取滚动条距离顶部的高度
+				var pcTop = document.documentElement.scrollTop || document.body.scrollTop;
+			
+				if(pcTop >= clientHeight){
+					btn.style.display='block';
+				}else{
+					btn.style.display='none';
+				}
+				/*if(!isTop){
+					clearInterval(timer);
+				}
+				isTop = false;*/
+				
+		}
+		btn.onclick=function(){
+			//设置定时器
+			timer = setInterval(function(){
+					//获取滚动条距离顶部的高度
+				var pcTop = document.documentElement.scrollTop || document.body.scrollTop;
+			var ispeed = Math.floor(-pcTop/6);
+
+				document.documentElement.scrollTop = document.body.scrollTop=pcTop+ispeed;
+				isTop=true;
+				//console.log(pcTop+ispeed;);
+				if(pcTop==0){
+					clearInterval(timer);
+				}
+
+				},30)
+		}
+
+	}
+	</script>
+</head>
+<body>
+	<a href="javascript:;" id="btn" title="回到顶部"></a>
+	<div class="bg">
+		<img src="images/tb_bg.jpg" alt="" />
+	</div>
+</body>
+</html>

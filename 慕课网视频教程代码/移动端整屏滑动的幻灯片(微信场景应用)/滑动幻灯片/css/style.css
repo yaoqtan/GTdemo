@@ -1,0 +1,39 @@
+body,html{height:100%;overflow:hidden;padding:0;margin:0;}
+.mag-slice-list{margin:0;padding:0;list-style:none;text-align:center;vertical-align:middle;color:#fff;font-size:20px;height:100%;width:100%;position:relative; top: 0px;}
+    .qiang{ position:relative;}
+    .mag-slice-list li:nth-child(1){
+        background: url('../images/55238527N6b3296bd.jpg') left center no-repeat;
+        background-size: 100% auto;
+    }
+    .mag-slice-list li:nth-child(2){
+        background:  #fff url('../images/5523a0bcNc497850f.png')  left center no-repeat;
+        background-size: 100% auto;
+    }
+    .mag-slice-list li:nth-child(3){
+        background:  #fff url('../images/55238527N571ae9a4.jpg')  left center no-repeat;
+        background-size: 100% auto;
+    }
+    .mag-slice-list li:nth-child(4){
+        background:  #fff url('../images/552384beN7715d6f6.png')  left center no-repeat;
+        background-size: 100% auto;
+    }
+    .mag-slice-list li:nth-child(5){
+        background:  #fff url('../images/5523a0bcN427456d1.png')  left center no-repeat;
+        background-size: 100% auto;
+    }
+    .mag-slice-list li:nth-child(6){
+        background:  #fff url('../images/552384bfNdbe53296.png')  left center no-repeat;
+        background-size: 100% auto;
+    }
+    .mag-slice-list li{
+        position:absolute;
+        width: 100%;
+        z-index:1;
+        visibility:hidden;
+        text-align: left;
+    }
+
+
+/*按钮*/
+
+.icoBtn{ width: 36px; height:36px; display: block; background: url('../images/552384bdN45510620.png') no-repeat; background-size: 100%; position: absolute; bottom:2em; left:50%; margin-left: -2em; z-index: 15;}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Lazyload</title>
+	<style>
+		.clearfix {
+			overflow: hidden;
+		}
+		#img-wrap {
+			width: 800px;
+			margin: 0 auto;
+		}
+		#img-wrap img {
+			min-height: 250px;
+		}	
+		.triggers span,
+		.item-panel {		
+			float: left;
+		}
+		.triggers span {
+			width: 100px;
+			height: 50px;
+			text-align: center;
+			line-height: 50px;
+			background-color: #CCC;
+			color: #FFF;
+			margin-right: 10px;
+		}
+		.panels {
+			margin-top: 20px;
+		}
+		.item-panel {
+			width: 800px;
+			display: none;
+		}
+		.item-panel1 {
+			display: block;
+		}
+	</style>
+	<script type="text/javascript" src = "../js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src = "jquery.lazyload.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#img-wrap img').lazyload({
+			    effect: "fadeIn"
+			});
+		})
+	</script>
+</head>
+<body>
+	<div id="img-wrap">
+		<img data-original="http://d1.jiuyan.info/2014/07/25/20450D39-B90C-F976-D10E-025252C5968F.w228.jpg">
+		<img data-original="http://d6.jiuyan.info/2014/07/24/2865C1C8-7C0A-4818-2326-B638026CB82F.w228.jpg">
+		<img data-original="http://d5.jiuyan.info/2014/07/24/F05E16A9-9646-63BF-0E86-AC42E94B74E6.w228.jpg">		
+		<img data-original="http://d4.jiuyan.info/2014/07/25/43EE4AE1-FDFC-BD06-1F0E-DF382DFEB9A1.w228.jpg">
+		<img data-original="http://d3.jiuyan.info/2014/07/25/6203F076-935B-7918-B8F6-559F27537D62.w228.jpg">
+		<img data-original="http://d2.jiuyan.info/2014/07/25/BEB11510-298E-4C07-FAAA-C5D47ACED570.w228.jpg">		
+		<img data-original="http://d1.jiuyan.info/2014/05/14/F00686A6-B8AC-38DA-A8EF-77C03A89B1B9.w228.jpg">
+		<img data-original="http://d6.jiuyan.info/2014/07/25/AEEA5773-4950-A95E-A777-10F3D0A35776.w228.jpg">
+		<img data-original="http://d2.jiuyan.info/2014/07/25/F04ED8FD-77D8-C595-EB36-CB57C58EE8BA.w228.jpg">		
+		<img data-original="http://d1.jiuyan.info/2014/07/25/FEB10452-342D-E6DC-E2FB-749B28A76117.w228.jpg">
+		<img data-original="http://d6.jiuyan.info/2014/07/25/6B52BFDE-7BED-CA6A-C7B6-B50CC7A59D9A.w228.jpg">
+		<img data-original="http://d5.jiuyan.info/2014/07/25/91C3CAD1-6EF3-5A6E-231B-477E6332B874.w228.jpg">
+		<img data-original="http://d4.jiuyan.info/2014/07/25/081912BF-91CA-B2C8-F14E-13800AE4AC2A.w228.jpg">
+		<img data-original="http://d3.jiuyan.info/2014/07/25/1CF4BBF6-1B75-23DE-7A81-D44329D8FC35.w228.jpg">
+		<img data-original="http://d2.jiuyan.info/2014/07/25/267576EB-7574-0AB3-7A9C-B21741B9417D.w228.jpg">
+		<img data-original="http://d1.jiuyan.info/2014/07/25/FE62FF82-732A-729A-D998-EA145638F045.w228.jpg">
+		<img data-original="http://d3.jiuyan.info/2014/07/24/0342A598-DEC4-918F-C17E-9BC5247576C0.w228.jpg">
+		<img data-original="http://d2.jiuyan.info/2014/07/25/9AAB794C-3C1A-3BC3-0CE4-661D284AC2ED.w228.jpg">
+		<img data-original="http://d1.jiuyan.info/2014/07/24/A2528E98-1492-4978-5672-912CA607AFD2.w228.jpg">
+		<img data-original="http://d6.jiuyan.info/2014/07/25/55D883C6-EEEF-1A1E-FF5D-F0FCEF569BCB.w228.jpg">
+		<img data-original="http://d5.jiuyan.info/2014/07/25/B3EEE78D-C4AE-A823-61C7-21019D6BA1ED.w228.jpg">
+		<img data-original="http://d4.jiuyan.info/2014/07/25/C96611B0-1F8A-C9D7-ED3C-AC3995724CC8.w228.jpg">
+		<img data-original="http://d3.jiuyan.info/2014/07/25/B0BE3E71-6556-271B-F661-30E2D4C2B1EC.w228.jpg">
+		<img data-original="http://d2.jiuyan.info/2014/07/25/B8E56323-2AB7-FA29-DC89-F79A9B352FD5.w228.jpg">
+		<img data-original="http://d4.jiuyan.info/2014/07/25/AFC745C7-C4AC-C7DD-BD7C-50A813688BE4.w228.jpg">
+		<img data-original="http://d3.jiuyan.info/2014/07/24/3C943F62-5A33-3053-0133-CB8C37BB6062.w228.png">
+		<img data-original="http://d2.jiuyan.info/2014/07/25/2A649467-60BF-ABBF-06A4-9C8D6836D415.w228.jpg">
+		<img data-original="http://d1.jiuyan.info/2014/07/25/772CBEA1-6FBB-77A6-879F-81DAF3CFE98B.w228.jpg">
+		<img data-original="http://d6.jiuyan.info/2014/07/25/9C8D565B-BA3A-D5F5-0855-84C419FBA450.w228.jpg">
+		<img data-original="http://d5.jiuyan.info/2014/07/25/40216F67-5D35-B832-0D9A-6785379B68BC.w228.jpg">
+		<img data-original="http://d4.jiuyan.info/2014/07/25/F3A28BC8-D7F2-B67E-1487-A0137A7FA4F4.w228.jpg">
+		<img data-original="http://d3.jiuyan.info/2014/07/25/65C4B33D-6420-2F9E-DA79-6843E917286B.w228.jpg">
+		<img data-original="http://d6.jiuyan.info/2014/05/19/E5536A87-4ACF-7FBA-8F7D-C50ADC905D76.w228.jpg">
+		<img data-original="http://d3.jiuyan.info/2014/05/06/8D3C53E3-4072-41B0-B53F-B19CCE6609B8.w228.jpg">
+		<img data-original="http://d2.jiuyan.info/2014/05/14/730B3837-4D92-4A76-1019-82975F568AA3.w228.jpg">
+		<img data-original="http://d2.jiuyan.info/2014/04/29/5C935FB9-ED5A-6F6E-61F5-8CDDD7730CF1.w228.jpg">
+		<img data-original="http://d2.jiuyan.info/2014/05/30/E88E3D46-D85D-B53A-6BFD-2D6CF5045892.w228.jpg">
+		<img data-original="http://d5.jiuyan.info/2014/05/30/99DABBED-C6B7-0AE3-26C9-4DF45B73312C.w228.jpg">
+		<img data-original="http://d4.jiuyan.info/2014/06/06/B817C279-03B9-9EA7-4F0E-A48EB54B3BD6.w228.jpg">
+		<img data-original="http://d5.jiuyan.info/2014/04/25/24FA8433-D292-30E7-2A6A-0763E85F41E0.w228.jpg">
+	</div>
+	
+</body>
+</html>

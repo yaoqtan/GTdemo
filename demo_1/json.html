@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset = "utf-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE = edge,chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name = "format-detection" content = "telephone=no">
+    <title>Json</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <style type="text/css">
+    .select{
+      display: block;
+      width: 130px;
+      height: 28px;
+      line-height: 28px;
+      border:1px solid #ccc;
+      margin:60px auto;
+    }
+    </style>
+    <script type="text/javascript" src = "js/jquery-1.11.3.min.js"></script>
+    <script>
+    $(function(){
+      /*$.getJSON("area.json",function(data){
+        var $box = $("#box");
+        var strHtml = "";
+        $box.empty();
+        $.each(data,function(infoIndex,info){
+          strHtml+="姓名："+info["nameTc"]+"<br>";
+          strHtml+="列表:"+info["districts"][infoIndex]+"<br>";
+        });
+        $box.html(strHtml)
+      });*/
+
+      $.ajax({
+        url:"area.json",
+        type:"GET",
+        dataType:"json",
+        beforeSend:function(){
+          console.log(1)
+        },
+        success:function(tt){
+          var json = eval(tt);
+          var _box = $("#box")
+            _box.empty();
+          var strHTML = "";
+          $.each(json,function(index){
+            var Item = json[index].districts;
+            strHTML+='<dl><a href = "javascript:void(0)">'+json[index].nameSc+'</a></dl>';
+              alert($(this).html());
+              $.each(Item,function(j){
+                strHTML+='<div class = '+j+'>'+Item[j].nameSc+'</div>'
+              });
+               
+            
+          });
+          _box.html(strHTML)
+        },
+        error:function(){
+          console.log(3)
+        },
+        
+      })
+    });
+    </script>
+  </head>
+  <body>
+  <div class = "box" id = "box">123</div>
+    <select class = "select" id = "select">
+      <option>1</option>
+      <option>2</option>
+    </select>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>css3图片墙</title>
+<script type="text/javascript">
+	window.onload = function(){
+		var Max = document.getElementById("button1");
+		var img = document.getElementById("img");
+		Max.onclick = function(){
+			fandda();
+		}
+		function fandda(){
+			var timer = setInterval(function(){
+				img.width = img.width * 1.05;
+				img.height = img.height * 1.05;
+			},100)
+		}
+	}
+</script>
+<style>
+	body{
+		
+	}
+	h1{
+		text-align: center;
+	}
+	.content{
+		width: 720px;
+		height: 360px;
+		margin:0 auto;
+		position: relative;
+		background: #ccc;
+
+	}
+
+	.content img {
+		position: absolute;
+		top:50px;
+		left:90px;
+		-webkit-transform:rotate(20deg);
+		-moz-transform:rotate(20deg);
+		transform:rotate(20deg);
+		background: #fff;
+		padding: 10px;
+		width: 140px;
+
+		-webkit-transition:1s;
+		-moz-transiton:1s;
+		transition:1s;
+
+	}
+	.content img:hover{
+		-webkit-transform:rotate(20deg);
+		-moz-transform:rotate(20deg);
+		transform:rotate(20deg);
+		-webkit-transform:scale(1.2);
+		-moz-transform:scale(1.2);
+		transform:scale(1.2);
+	}
+
+
+
+
+    .content-box{
+        box-sizing:content-box;
+        -moz-box-sizing:content-box;
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        border: 5px solid #E6A43F;
+        background: blue;
+    }
+    .padding-box{
+        box-sizing:padding-box;
+        -moz-box-sizing:padding-box;
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        border: 5px solid #186645;
+        background: red;                
+    }
+    .border-box{
+        box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        width: 90px;
+        height: 90px;
+        padding: 20px;
+        border: 5px solid #3DA3EF;
+        background: yellow;
+    }
+</style>
+</head>
+
+<body>
+<h1>css3图片墙</h1>
+<div class = "content"><img src = "img/9.jpg" id = "img"></div>
+<input type="button" id = "button1" value="放大">
+<input type="button" id = "button2" value="缩小">
+</body>
+
+<div class = "content-box"></div>
+<div class = "padding-box"></div>
+<div class = "border-box"></div>
+</html>

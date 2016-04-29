@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>js特效制作星星打分效果适用于网站评论打分js星级评分效果</title>
+<meta name="description" content="用js特效制作一个星星评论打分的特效，适用于一些文章点评，评论打分的js评分特效，内含js代码下载。" />
+</head>
+<body>
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+img{vertical-align:middle;}
+#QuacorGrading input{background:url(images/grading.png) no-repeat scroll right center;cursor:pointer;height:30px;width:30px;padding:0;border:0;}
+</style>
+
+<div id="QuacorGrading" style="margin:200px 0 0 200px;">
+
+	<strong>评分</strong>
+	<input name="1" type="button" />
+	<input name="2" type="button" />
+	<input name="3" type="button" />
+	<input name="4" type="button" />
+	<input name="5" type="button" />
+	<input name="6" type="button" />
+	<input name="7" type="button" />
+	<input name="8" type="button" />
+	<input name="9" type="button" />
+	<input name="10" type="button" />
+	<span id="QuacorGradingValue"><b><font size="5" color="#fd7d28">6.5</font></b>分</span>
+	
+</div><!--QuacorGrading end-->
+
+<script type="text/javascript">
+var GradList = document.getElementById("QuacorGrading").getElementsByTagName("input");
+
+for(var di=0;di<parseInt(document.getElementById("QuacorGradingValue").getElementsByTagName("font")[0].innerHTML);di++){
+	GradList[di].style.backgroundPosition = 'left center';
+}
+
+for(var i=0;i < GradList.length;i++){
+	GradList[i].onmouseover = function(){
+		for(var Qi=0;Qi<GradList.length;Qi++){
+			GradList[Qi].style.backgroundPosition = 'right center';
+		}
+		for(var Qii=0;Qii<this.name;Qii++){
+			GradList[Qii].style.backgroundPosition = 'left center';
+		}
+		document.getElementById("QuacorGradingValue").innerHTML = '<b><font size="5" color="#fd7d28">'+this.name+'</font></b>分';
+	}
+}
+</script>
+</body>
+</html>

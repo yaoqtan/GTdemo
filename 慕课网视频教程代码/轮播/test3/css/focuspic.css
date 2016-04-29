@@ -1,0 +1,59 @@
+body,img,div,ul,li,span,p,a{
+	margin:0px;
+	padding:0px;
+}
+ul,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.banner{
+	width:520px;
+	height: 280px;
+	margin: 10px auto;
+	position: relative;
+}
+.banner img{
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+}
+.banner ul{
+	position: absolute;
+	top: 250px;
+	left: 238px;
+	z-index: 4;
+}
+.banner ul li{
+	float: left;
+	padding:0 5px;
+	color:#999;
+	font-size:14px;
+	cursor:pointer;
+}
+/*.banner ul li:hover{
+	color:red;
+}*/
+.banner span{
+	position: absolute;
+	bottom:0px;
+	left:0px;
+	width:520px;
+	height:45px;
+	background: #333;
+	opacity: 0.3;
+	filter:alpha(opacity=30);
+	z-index: 3;
+}
+.banner strong{
+	position: absolute;
+	top:248px;
+	left: 40px;
+	font-size:16px;
+	color:#999;
+	z-index: 4;
+	color: #8d8282;
+}

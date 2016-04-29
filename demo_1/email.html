@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>email demo</title>
+  <style type="text/css">
+  #demo{
+    color: red;
+  }
+  </style>
+
+</head>
+<body>
+   <script type="text/javascript">
+     function ccc(){
+      alert(3);
+     }
+    
+  </script>
+<div id = "demo">aaa</div>
+<div id = "box" style="color:#ccc" onclick = "alert(2)">bbb</div>
+<div id = "wrap" onclick = "ccc()">ccc</div>
+<div id = "content">aaa</div>
+<script type="text/javascript">
+  var content = document.getElementById("content");
+  alert(content.innerHTML)
+  var item = document.createElement("span");
+      item.id = "item";
+  var node = document.createTextNode("adddd");
+  item.appendChild(node);
+  content.appendChild(item);
+  item.onclick = function(){
+    alert(89)
+  }
+</script>
+</body>
+<script type="text/javascript" src = "https://code.jquery.com/jquery-1.11.3.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      $("#demo").click(function(){
+        alert(1)
+      })
+    })
+  </script>
+ 
+</html>

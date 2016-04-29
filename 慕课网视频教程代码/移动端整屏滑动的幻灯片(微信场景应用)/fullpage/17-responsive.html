@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo</title>
+  <meta name="viewport" content="width=divice-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+  
+  <link rel="stylesheet" href="css/idangerous.swiper.css">
+  
+  <!-- 引入动画库-->
+  <link type="text/css" href="css/animate.css" rel="stylesheet"/>
+  <link type="text/css" href="css/magic.css" rel="stylesheet"/>
+
+  <link type="text/css" href="css/flash.css" rel="stylesheet" /> 
+  
+ 
+  <link type="text/css" href="css/cur.css" rel="stylesheet" /> 
+  <style>
+ 
+  
+/* Demo Styles */
+*{
+	margin:0;padding:0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  position: relative;
+  height: 100%;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+}
+.red-slide {
+  background:url(images/1.jpg) no-repeat;
+  background-size:auto 125%;
+  background-position:50% 0%;
+  -webkit-filter:blur(8px);
+}
+.blue-slide {
+  background:url(images/2.jpg) no-repeat;
+}
+.orange-slide {
+  //background-color:aquamarine;
+  background:url(images/3.jpg) no-repeat;
+}
+.green-slide {
+  background-color:rgb(41,161,214);
+}
+.pink-slide {
+  background:url(images/5.jpg) no-repeat;
+}
+
+.cyan-slide {
+  background:url(images/6.jpg) no-repeat;
+}
+
+.lime-slide {
+  background:url(images/7.jpg) no-repeat;
+}
+
+.magenta-slide {
+  background:rgb(249, 110, 87);
+}
+
+.swiper-slide:not(.red-slide){
+	background-size:cover;
+	background-position:center center;
+}
+
+.pagination {
+  position: absolute;
+  z-index: 20;
+  top: 40%;
+  right: 4%;
+}
+.swiper-pagination-switch {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #222;
+  margin-top: 50%;
+  opacity: 0.8;
+  cursor: pointer;
+  
+}
+.swiper-visible-switch {
+  background: #aaa;
+}
+.swiper-active-switch {
+  background: #fff;
+}
+
+.icon{
+	position:absolute;
+	left:50%;
+	bottom:5%;
+	
+	transform:translateX(-50%);
+	-webkit-transform:translateX(-50%);
+	-moz-transform:translateX(-50%);
+	-ms-transform:translateX(-50%);
+	-o-transform:translateX(-50%);
+
+	
+	animation:move 1s ease-in infinite;
+	-webkit-animation:move 1s ease-in infinite;
+	-moz-animation:move 1s ease-in infinite;
+	-ms-animation:move 1s ease-in infinite;
+	-o-animation:move 1s ease-in infinite;
+	
+	transition:all 1s linear;
+	-webkit-transition:all 1s linear;
+	-moz-transition:all 1s linear;
+	-ms-transition:all 1s linear;
+	-o-transition:all 1s linear;
+}
+
+@keyframes move{
+	from{opacity:1;bottom:5%;}
+	to{	opacity:0;bottom:10%;}
+}
+
+@-webkit-keyframes move{
+	from{opacity:1;bottom:5%;}
+	to{opacity:0;bottom:10%;}
+}
+@-moz-keyframes move{
+	from{opacity:1;bottom:5%;}
+	to{opacity:0;bottom:10%;}
+}
+@-ms-keyframes move{
+	from{opacity:1;bottom:5%;}
+	to{opacity:0;bottom:10%;}
+}
+@-o-keyframes move{
+	from{opacity:1;bottom:5%;}
+	to{opacity:0;bottom:10%;}
+}
+
+
+
+
+.red-slide .title{
+	margin-top:25%;
+}
+
+.red-slide p{
+	margin-top:85%;
+}
+
+  </style>
+  
+  <script>
+		window.onload=function(){
+		
+		
+			
+				//去掉右侧翻页小列表
+			/*	var dir=document.getElementsByClassName('pagination')[0];
+				dir.style.display='none';*/
+			
+				//保持图片是正方形
+				var oImg=document.getElementsByClassName('jay')[0];
+				var oChri=document.getElementById('christmas');
+				var h1=document.getElementsByClassName('h1');
+				var oBox=document.getElementsByClassName('box');
+				var oImgBorder=document.getElementsByClassName('img_border')[0];
+				
+				
+				if(oImg.currentStyle){
+					oImg.style.height=parseInt(oImg.currentStyle.width)+'px';
+				}else{
+					oImg.style.height=parseInt(getComputedStyle(oImg,false).width)+'px';
+				}
+				
+				if(oChri.currentStyle){
+					oChri.style.height=parseInt(oChri.currentStyle.width)+'px';
+				}else{
+					oChri.style.height=parseInt(getComputedStyle(oChri,false).width)+'px';
+				}
+				
+				if(oImgBorder.currentStyle){
+					oImgBorder.style.height=oImgBorder.currentStyle.width;
+				}else{
+					oImgBorder.style.height=getComputedStyle(oImgBorder,false).width;
+				}
+				
+				
+				
+				for(var i=0;i<h1.length;i++)
+				{
+					if(h1[i].currentStyle){
+						h1[i].style.height=parseInt(h1[i].currentStyle.width)+'px';
+					}else{
+						h1[i].style.height=parseInt(getComputedStyle(h1[i]).width,false)+'px';
+					}
+				}
+				
+				for(var i=0;i<oBox.length;i++)
+				{
+					if(oBox[i].currentStyle){
+						oBox[i].style.height=parseInt(h1[0].currentStyle.width)+'px';
+						oBox[i].style.margin='15% auto'+ h1[1].style.marginTop+' auto;'
+					}else{
+						oBox[i].style.height=parseInt(getComputedStyle(h1[0],false).width)+'px';
+						oBox[i].style.margin='15% auto'+ getComputedStyle(h1[1],false).marginTop+' auto;'
+					}
+					
+					
+				}
+		}
+		
+		
+  </script>
+</head>
+<body>
+  <div class="swiper-container" >
+    <div class="swiper-wrapper">
+	
+	
+	<!-- 第一页-->
+      <div class="swiper-slide red-slide">
+		<div class="title">
+			
+		</div>
+      </div>
+	  
+	 <!-- 第二页--> 
+      <div class="swiper-slide blue-slide">
+        <div class="title">
+        	<div id="tag_1" class="tag_1">
+				<p class="txt1">邂逅</p>
+			</div>
+			<div id="tag_2" class="tag_2">
+				<p class="txt2">浪漫</p>
+			</div>
+		</div>
+		
+		<p id="blue_content" class="blue_content">
+				爱上北欧西国
+		</p>
+        
+      </div>
+      
+	  
+	  
+	  
+	 <!-- 第三页--> 
+      <div class="swiper-slide orange-slide">
+            <div id="jay" class="jay"></div>
+			<div id="song_txt" class="song_txt">
+				<p style="line-height:12vmin;font-size:5vmin;color:white;text-align:center;font-weight:bold;font-family:'微软雅黑';">从前从前 有个人爱你很久</p>
+				<p style="line-height:12vmin;font-size:5vmin;color:white;text-align:center;font-weight:bold;font-family:'微软雅黑';">但偏偏 风渐渐 </p>
+				<p style="line-height:12vmin;font-size:5vmin;color:white;text-align:center;font-weight:bold;font-family:'微软雅黑';">把距离吹的好远</p>
+			</div>
+      </div>
+	  
+	  
+	  <!-- 第四页-->
+      <div class="swiper-slide green-slide">
+			<div id="christmas" class="christmas animated bounceIn"> </div>
+			<p id="merry_txt1" class="merry_txt1">旗云祝大家圣诞快乐</p>
+			<p id="merry_txt2" class="merry_txt2">Merry Christmas</p>
+		
+      </div>
+	  
+	  
+	  <!-- 第五页-->
+      <div class="swiper-slide pink-slide">
+			<div id="line" class="line"></div>
+			
+			<div class="sky">
+				<p id="mes1" class="mes mes1">想念你时</p>
+				<p id="mes2" class="mes mes2">我就望着窗外的天空</p>
+				<p id="mes3" class="mes mes3">很庆幸</p>
+				<p id="mes4" class="mes mes4">不管距离有多远</p>
+				<p id="mes5" class="mes mes5">我们总在同一片天空下</p>
+			</div>	
+				
+      </div>
+	  
+	  
+	  <!-- 第六页-->
+      <div class="swiper-slide cyan-slide">
+			
+		<div id="lrc1" class="lrc1">
+			<p class="lrc1_txt">那温暖 的阳光</p>
+		</div>
+		
+		<div id="lrc2" class="lrc2">
+			<p class="lrc2_txt">像刚摘的 鲜艳草莓</p>
+		
+		</div>
+		
+		<div id="lrc3" class="lrc3">
+			<p class="lrc3_txt">你说你舍不得吃掉这一种感觉</p>
+		
+		</div>
+			
+      </div>
+	  
+	  
+	  <!-- 第七页-->
+      <div class="swiper-slide lime-slide">
+			
+			<div class="box box_1">
+				<div id="head1" class="h1 head1 picOpacity"></div>
+				<div id="head2" class="h1 head2 picOpacity"></div>
+				<div id="head3" class="h1 head3 picOpacity"></div>
+			</div>
+			<div class="box box_2">
+				<div id="head4" class="h1 head4 picOpacity"></div>
+				<div id="head5" class="h1 head5 picOpacity"></div>
+				<div id="head6" class="h1 head6 picOpacity"></div>
+			</div>
+			<div class="box box_3">
+				<div id="head7" class="h1 head7 picOpacity"></div>
+				<div id="head8" class="h1 head8 picOpacity"></div>
+				<div id="head9" class="h1 head9 picOpacity"></div>
+			</div>
+			
+      </div>
+	  
+		
+	  <!-- 第八页-->	
+      <div class="swiper-slide magenta-slide">
+        
+			<div class="img_border">
+				<div id="end_image" class="end_image ">
+					
+				</div>
+			</div>
+			<p id="end_title" class="end_title">爱似百汇/Jimmy</p>
+			<div id="line_hr" class="line_hr"></div>
+			<p id="end_txt" class="end_txt">
+				好不容易又能再多爱一天<br/>
+			
+				但故事的最后你好像还是说了拜拜
+			</p>
+      </div>
+		
+		
+	  <!-- 第九页-->
+	  <div class="swiper-slide green-slide">
+
+	  </div>
+	  
+	  
+	  
+	  <!-- 插入背景音乐文件-->
+	 	<audio controls="controls" autoplay="true" loop="-1" style="height:0;width:0;">
+			  <source src="music/19.mp3" type="audio/mpeg">
+			  <source src="music/19.ogg" type="audio/ogg">
+			  
+				Your browser does not support the audio element.
+		</audio>
+	
+	
+    </div>
+    
+
+
+	<!-- 右侧翻页栏-->	
+	<div class="pagination"></div>
+	
+	
+	
+	<!-- 向上滑动的图标-->
+	<div class="icon">
+		<img src="images/icon.png"/>
+	</div>
+	
+  </div>
+  
+  
+  
+  <script src="js/jquery-1.10.1.min.js"></script>
+  <script src="js/idangerous.swiper.min.js"></script>
+ 
+
+
+  <script>
+  var mySwiper = new Swiper('.swiper-container',{
+    pagination: '.pagination',
+    paginationClickable: true,	
+    mode: 'vertical',
+	loop:true,
+	speed:530,
+	
+	
+	<!-- 滑动到当前页面执行该页面动画-->
+	onSlideChangeEnd:function(){
+		func_animate(mySwiper.activeLoopIndex);
+	}
+	
+	
+		
+  })
+ </script>   
+<script>
+		
+		/*页面加载时执行第一页的动画*/
+		/*$(function(){
+			$('.red-slide').addClass('slide1');
+			alert('请缩小浏览器窗口到合适的大小，或者使用chrome移动端模拟器查看效果');
+		})*/
+		
+		
+		
+		
+		
+		function func_animate(idx){
+			
+		
+			if(idx==0){
+			
+					$('.red-slide').addClass('slide1');
+					
+			}else{
+					$('.red-slide').removeClass('slide1');
+					$('.red-slide').css({
+					'background-size':'auto 125%',
+					'background-position':'50% 0%;'
+					})
+					
+					
+			}
+			
+			
+			if(idx==1){
+					$('#tag_1').removeClass('tag_1').addClass('tag_1_flash');
+					$('#tag_2').removeClass('tag_2').addClass('tag_2_flash');
+					$('#blue_content').removeClass('blue_content').addClass('blue_content_flash');
+			}else{
+					$('#tag_1').removeClass('tag_1_flash').addClass('tag_1');
+					$('#tag_2').removeClass('tag_2_flash').addClass('tag_2');
+					$('#blue_content').removeClass('blue_content_flash').addClass('blue_content');
+			}
+		
+			if(idx==2){
+					$('#jay').removeClass('jay').addClass('jay_flash');
+					$('#song_txt').removeClass('song_txt').addClass('song_txt_flash');
+			}else{
+					$('#jay').removeClass('jay_flash').addClass('jay');
+					$('#song_txt').removeClass('song_txt_flash').addClass('song_txt');
+			}
+			
+			if(idx==3){
+					$('#christmas').addClass('animated bounceIn christmas').removeClass('christmas_flash');
+					$('#merry_txt1').addClass('merry_txt1_flash').removeClass('merry_txt1');
+					$('#merry_txt2').addClass('merry_txt2_flash').removeClass('merry_txt2');
+			}else{
+					$('#christmas').removeClass('animated bounceIn christmas_flash').addClass('christmas');
+					$('#merry_txt1').addClass('merry_txt1').removeClass('merry_txt1_flash');
+					$('#merry_txt2').addClass('merry_txt2').removeClass('merry_txt2_flash');
+					
+			}
+			
+			
+			if(idx==4){
+				$('#line').removeClass('line').addClass('line_flash');
+				$('#mes1').removeClass('mes1').addClass('mes1_flash');
+				$('#mes2').removeClass('mes2').addClass('mes2_flash');
+				$('#mes3').removeClass('mes3').addClass('mes3_flash');
+				$('#mes4').removeClass('mes4').addClass('mes4_flash');
+				$('#mes5').removeClass('mes5').addClass('mes5_flash');
+			}else{
+				$('#line').removeClass('line_flash').addClass('line');
+				$('#mes1').removeClass('mes1_flash').addClass('mes1');
+				$('#mes2').removeClass('mes2_flash').addClass('mes2');
+				$('#mes3').removeClass('mes3_flash').addClass('mes3');
+				$('#mes4').removeClass('mes4_flash').addClass('mes4');
+				$('#mes5').removeClass('mes5_flash').addClass('mes5');
+			}
+			
+			if(idx==5){
+				$('#lrc1').removeClass('lrc1').addClass('lrc1_flash');
+				$('#lrc2').removeClass('lrc2').addClass('lrc2_flash');
+				$('#lrc3').removeClass('lrc3').addClass('lrc3_flash');
+		
+			}else{
+				$('#lrc1').removeClass('lrc1_flash').addClass('lrc1');
+				$('#lrc2').removeClass('lrc2_flash').addClass('lrc2');
+				$('#lrc3').removeClass('lrc3_flash').addClass('lrc3');
+			}
+			
+			
+			if(idx==6){
+				for(var i=1;i<10;i++){
+					var $picIndex=i;
+					$('#head'+$picIndex).removeClass('picOpacity').addClass('animated zoomIn picOpacity_flash');
+				}
+				
+				
+			}else{
+				for(var j=1;j<10;j++){
+					var $picIndex=j;
+					$('#head'+$picIndex).removeClass('animated zoomIn picOpacity_flash').addClass('picOpacity');
+				}
+				
+			}
+			
+			
+			
+			if(idx==7){
+				$('#end_image').removeClass('end_image').addClass('end_image_flash');
+				$('#end_title').removeClass('end_title').addClass('end_title_flash');
+				$('#line_hr').removeClass('line_hr').addClass('line_hr_flash');
+				$('#end_txt').removeClass('end_txt').addClass('end_txt_flash');
+			}else{
+				$('#end_image').removeClass('end_image_flash').addClass('end_image');
+				$('#end_title').removeClass('end_title_flash').addClass('end_title');
+				$('#line_hr').removeClass('line_hr_flash').addClass('line_hr');
+				$('#end_txt').removeClass('end_txt_flash').addClass('end_txt');
+			}
+		}
+		
+		
+		
+		
+  </script>
+  
+	
+  
+  
+  
+  
+  
+</body>
+</html>

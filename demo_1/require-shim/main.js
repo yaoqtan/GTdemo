@@ -1,0 +1,19 @@
+require.config({
+	shim:{
+		'underscore':{
+			exports:'_'
+		},
+		'backbone':{
+			deps:['underscore','jquery'],
+			exports:'Backbone'
+		},
+		'jquery.scroll':{
+			deps:['jquery'],
+			exports:'jQuery.fn.scroll'
+		},
+	}
+})
+//domready插件，可以让回调函数在页面DOM结构加载完成后再运行。
+require(['domready!'],function(doc){
+	
+})
