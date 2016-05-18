@@ -10,6 +10,7 @@
   <body>
     <script type="text/javascript">
       console.log(Navigator)
+
     </script>
     <div id="example"></div>
 
@@ -20,8 +21,10 @@
   txt+= "<p>Browser Version: " + navigator.appVersion + "</p>";
   txt+= "<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>";
   txt+= "<p>Platform: " + navigator.platform + "</p>";
-  txt+= "<p>User-agent header: " + navigator.userAgent + "</p>";
+  txt+= "<p style = 'color:red'>User-agent header: " + navigator.userAgent + "</p>";
   txt+= "<p>User-agent language: " + navigator.systemLanguage + "</p>";
+
+
 
   document.getElementById("example").innerHTML=txt;
 

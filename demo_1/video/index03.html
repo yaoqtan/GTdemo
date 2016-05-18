@@ -8,13 +8,13 @@
 </head>
 <body>
   <div class = "wrap">
-    <video   id = "video" poster="123.png" >
+    <video   id = "video" poster="123.png" controls>
       <source src = "123.mp4"></video>
     </video>
     <div class = "plug">
       <a id = "btn" href = "javascript:void(0)">播放</a>
       <div class = "progress">
-        <div class = "bufferBar"></div>
+        <div class = ""></div>
         <div class = "currentTime"></div>
         <div class = "duration"></div>
       </div>
@@ -27,5 +27,11 @@
   </div>
   <script type="text/javascript" src = "http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
   <script type="text/javascript" src = "index.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      var video = $("#video");
+      alert(video[0].controls)
+    });
+  </script>
 </body>
 </html>

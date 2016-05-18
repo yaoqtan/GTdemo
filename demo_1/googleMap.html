@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-HK" fontSize="M">
+<head>
+    <meta charset="utf-8" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>VisitUs</title>
+    <style type="text/css">
+      html, body { height: 100%; margin: 0; padding: 0; }
+      #map { height: 100%; }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+    <script type="text/javascript">
+        function initMap() {
+          var myCenter = new google.maps.LatLng(23.117,113.27);
+          var map;
+          var marker;
+          var mapProp= {
+            center: myCenter,//{lat: -34.397, lng: 150.644},
+            zoom: 17,
+            mapTypeId:google.maps.MapTypeId.ROADMAP
+          };
+          map = new google.maps.Map(document.getElementById('map'),mapProp);
+         //标记
+          marker = new google.maps.Marker({
+            position:myCenter,
+            animation:google.maps.Animation.BOUNCE,
+            icon:"http://127.0.0.1/Link/Link_Revamp/TheLinkRevamp_Web/dist/images/logo-header.png"
+          });
+          marker.setMap(map);
+
+          //事件
+          google.maps.event.addListener(marker,'click',function(){
+            map.setZoom(9);
+            map.setCenter(marker.getPosition());
+          });
+          
+          //设置标记及打开每个标记的信息窗口
+         /* google.maps.event.addListener(map,'click',function(event){
+           placeMarker(event.LatLng);
+          });
+          function placeMarker(location){
+            var marker =new google.maps.Marker({
+              position:location,
+              map:map,
+            });
+            var infowindow = new google.maps.InfoWindow({
+              content:'Latitude:'+1+"<br>Longitude"+1
+            });
+            infowindow.open(map,marker);
+          }*/
+
+          //信息窗口
+          var infowindow = new google.maps.InfoWindow({
+            InfoWindowOptions:true,
+            content:"<div class = 'hello'>Hello,World</div>"
+          });
+          infowindow.open(map,marker);
+
+        }
+
+    </script>
+    <!-- <script type="text/javascript" src = "mapjs/park.js"></script> -->
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&callback=initMap">//&sensor=false
+    </script>
+
+<!--GT-key: AIzaSyBJHlb64_fYMO7268fpRQkLME_7hzb0ppU -->
+</body>
+</html>
