@@ -53,8 +53,9 @@
 
           //信息窗口
           var infowindow = new google.maps.InfoWindow({
-            InfoWindowOptions:true,
-            content:"<div class = 'hello'>Hello,World</div>"
+            //InfoWindowOptions:true,
+            content:"<div class = 'hello'>Hello,World</div>",
+            close:false,
           });
           infowindow.open(map,marker);
 

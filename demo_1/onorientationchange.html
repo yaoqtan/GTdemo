@@ -1,0 +1,42 @@
+<!Doctype html>  
+    <html>  
+        <head>  
+            <meta charset="utf-8">  
+            <title>横竖屏切换检测</title>  
+            <style type="text/css">  
+                .landscape body {  
+                    background-color: #ff0000;  
+                }  
+      
+                .portrait body {  
+                    background-color: #00ffff;  
+                }  
+            </style>  
+        </head>  
+        <body orient="landspace">  
+            <div>  
+                内容  
+            </div>  
+            <script type="text/javascript">  
+                        var updateOrientation=function(){  
+                            var orientation=window.orientation;  
+                            switch(orientation){  
+                                case 90:   
+                                case -90:  
+                                    orientation="landscape";  
+                                    break;  
+                                default:  
+                                    orientation="portrait";  
+                                    break;  
+                            }  
+                            console.log(window.orientation)
+                            document.body.parentNode.setAttribute("class",orientation);  
+                        };  
+      
+                        window.addEventListener("orientationchange",updateOrientation,false);  
+                        updateOrientation();  
+                      
+                
+            </script>  
+        </body>  
+    </html>  

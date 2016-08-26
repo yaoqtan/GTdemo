@@ -1,0 +1,34 @@
+<!Doctype html>  
+    <html>  
+        <head>  
+            <meta charset="utf-8">  
+            <title>横竖屏切换检测</title>  
+            <style type="text/css">  
+                .landscape body {  
+                    background-color: #ff0000;  
+                }  
+      
+                .portrait body {  
+                    background-color: #00ffff;  
+                }  
+            </style>  
+        </head>  
+        <body orient="landspace">  
+            <div>  
+                内容  
+            </div>  
+            <script type="text/javascript">  
+            function hengshuping(){ 
+              if(window.orientation==180||window.orientation==0){ 
+                    alert("竖屏状态！")        
+               } 
+            if(window.orientation==90||window.orientation==-90){ 
+                    alert("横屏状态！")         
+                } 
+             } 
+            window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", hengshuping, false);
+                      
+                
+            </script>  
+        </body>  
+    </html>  

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cross-device Address Bar Hide - Example 1</title>
+  <style>
+    body { min-height: 980px; }
+  </style>
+</head>
+<body>
+  <p>The script on this page should hide the address bar on iOS and Android.ww</p>
+</body>
+<script type="text/javascript">
+    document.getElementsByTagName('body').style.height = "100px;"
+    window.addEventListener("load",function() {
+      setTimeout(function(){
+        window.scrollTo(0, 10);
+      }, 1);
+      setTimeout(function(){
+        window.scrollTo(0, 10);
+      }, 0
+     );
+    });
+</script>
+</html>

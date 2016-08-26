@@ -9,25 +9,15 @@
   <meta property="og:title" content="分享测试-title" />
   <meta property="og:description" content="分享测试-og:description" />
   <meta property="og:image" content="http://uat.gtomato.com/linkcny/test-only/img/share.png" />
-   <script type="text/javascript" src = "https://code.jquery.com/jquery-1.11.3.js"></script>
-  <script type="text/javascript">
-    $(function(){
-      var img =$("body").find("img").eq(1).attr("src") || "http://uat.gtomato.com/linkcny/test-only/img/share.png";
-      var head = $("head").eq(0);
-      head.find("meta[property='og:image']").attr("content",img);
-      $("#wx_pic").find("img").attr("src",img)
-
-    })
-  </script>
   <div id = "wx_pic" style = "margin:0 auto;position:absolute;width:0;height:0;opacity:0;">
     <img src="http://uat.gtomato.com/linkcny/test-only/img/share.png">
   </div>  
  
 </head>
 <body>
-  <div id = "demo" class = "demo">
-    <img src="images/p3_title.png">
-  </div>
+<!--   <div id = "demo" class = "demo">
+  <img src="images/p3_title.png">
+</div> -->
   
 </body>
 </html>
